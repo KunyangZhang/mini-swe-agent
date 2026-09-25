@@ -47,6 +47,16 @@ Repeat exactly the same command to resume. Model, environment, agent settings, a
 
 No paid model evaluation was performed for the checked-in report. The model adapter integration is available, but live-provider behavior is not claimed as validated.
 
+## Repeated crash campaign (2026-09-26)
+
+```bash
+python -m tests.harness.benchmark --repeats 25 --workers 4
+```
+
+[Recorded results](evidence/repeated-recovery.json): seven fixed fault boundaries, each repeated 25 times, for **175 durable runs**. **100 automatically completed**, **75 blocked on an unknown action/model outcome**, and **zero duplicated counter writes** were observed. The comparison uses 25 fresh restarts of the unmodified `DefaultAgent` after the side effect; all 25 duplicated that write. These are observed fault-campaign counts, not production availability or universal exactly-once guarantees. Repetitions exercise the same seven boundaries. Blocked runs are not counted as completed tasks.
+
+Each case starts a real process, forces abrupt exit, starts another process, and checks the resulting file. The benchmark fails if an automatically completed durable run does not produce exactly one write. Full per-case outcomes are saved so counts can be audited.
+
 ## Recovery contract
 
 ```text

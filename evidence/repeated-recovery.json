@@ -1,0 +1,1675 @@
+{
+  "generated_at": "2026-09-25T16:04:09.835982+00:00",
+  "python": "3.12.14",
+  "repeats_per_fault": 25,
+  "workers": 4,
+  "seconds": 187.12950032300432,
+  "scope": "scripted model; real local subprocess commands; abrupt os._exit(77) at seven transaction boundaries",
+  "summary": {
+    "durable_cases": 175,
+    "automatic_completed": 100,
+    "safely_blocked": 75,
+    "duplicate_effect_cases": 0,
+    "fresh_restart_cases": 25,
+    "fresh_restart_duplicate_cases": 25
+  },
+  "by_fault": {
+    "after_reply": {
+      "n": 25,
+      "outcomes": {
+        "completed": 25
+      },
+      "duplicate_effect_cases": 0
+    },
+    "before_begin": {
+      "n": 25,
+      "outcomes": {
+        "completed": 25
+      },
+      "duplicate_effect_cases": 0
+    },
+    "after_result": {
+      "n": 25,
+      "outcomes": {
+        "completed": 25
+      },
+      "duplicate_effect_cases": 0
+    },
+    "after_observation": {
+      "n": 25,
+      "outcomes": {
+        "completed": 25
+      },
+      "duplicate_effect_cases": 0
+    },
+    "before_effect": {
+      "n": 25,
+      "outcomes": {
+        "blocked": 25
+      },
+      "duplicate_effect_cases": 0
+    },
+    "after_effect": {
+      "n": 25,
+      "outcomes": {
+        "blocked": 25
+      },
+      "duplicate_effect_cases": 0
+    },
+    "during_query": {
+      "n": 25,
+      "outcomes": {
+        "blocked": 25
+      },
+      "duplicate_effect_cases": 0
+    }
+  },
+  "cases": [
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 0,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.7228761709993705
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 0,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.4355641680012923
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 0,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.4661191800259985
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 0,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.2554539710108656
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 0,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.4941423110140022
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 0,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.5131523109739646
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 0,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.6562395119981375
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 1,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.0162575150025077
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 1,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.439577115001157
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 1,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.3015072089910973
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 1,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.2398058749968186
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 1,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 2.717632329004118
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 1,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.9969411400088575
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 1,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 2.318649730994366
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 2,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.9740879110177048
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 2,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.1947925339918584
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 2,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.9680587390030269
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 2,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.5232992460078094
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 2,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 2.2904119929880835
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 2,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.127618701022584
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 2,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 2.0108062060025986
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 3,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.0445740040158853
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 3,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.3929446350084618
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 3,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.616882177972002
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 3,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.111038100993028
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 3,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 2.3039376979868393
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 3,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.298485406994587
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 3,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 2.2034274109755643
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 4,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.1177186140266713
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 4,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.6401907929976005
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 4,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.4894800999900326
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 4,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.437650901003508
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 4,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 2.037228318018606
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 4,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.179567217011936
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 4,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 2.1265111209941097
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 5,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.911249291995773
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 5,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 3.284487179014832
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 5,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.9385665910085663
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 5,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.4647726099938154
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 5,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 3.0872078890097328
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 5,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 3.384150980011327
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 5,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 3.1120545900193974
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 6,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 3.960790459997952
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 6,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 3.676461572002154
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 6,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 3.9200984640046954
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 6,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 3.2834562869975343
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 6,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 3.750235771003645
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 6,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.8266610029968433
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 6,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 3.6217006759834476
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 7,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 3.177998891012976
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 7,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.9438979999977164
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 7,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.1337295270059258
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 7,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.8786536030238494
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 7,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 2.8817677019978873
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 7,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.622023510019062
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 7,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 2.748615704011172
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 8,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.534671511995839
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 8,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.7094278050062712
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 8,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.8842046989884693
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 8,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.6652085070090834
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 8,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 3.3044103859865572
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 8,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.947133798006689
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 8,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 2.230775824020384
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 9,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.3629101190017536
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 9,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.2374118239968084
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 9,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.834380202984903
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 9,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.3917358180042356
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 9,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 2.4677152140066028
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 9,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.329276917007519
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 9,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 2.4067957130027935
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 10,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.246153518994106
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 10,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.889630396006396
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 10,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.1711078220105264
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 10,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.5998891420022119
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 10,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.8018566350219771
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 10,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.8967432339850347
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 10,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 2.4797498130064923
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 11,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.1494482250127476
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 11,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 3.0398508940124884
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 11,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.45795101497788
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 11,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.611925009987317
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 11,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 2.437624615005916
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 11,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.873236101004295
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 11,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.8813468359876424
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 12,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.255643423006404
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 12,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.210777723987121
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 12,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.6436400090169627
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 12,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.692266606987687
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 12,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 2.3077829200192355
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 12,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 2.2211068230099045
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 12,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.924272532982286
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 13,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.6038745449914131
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 13,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.7793427380092908
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 13,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.7056047399819363
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 13,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.650585643015802
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 13,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.35507925300044
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 13,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.49393014900852
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 13,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.5185009480046574
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 14,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.5175087479874492
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 14,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.6585307430068497
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 14,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.63734904298326
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 14,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.6369703430100344
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 14,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 2.0221135299943853
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 14,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.5150366479938384
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 14,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.5782150459999684
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 15,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.4917983479972463
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 15,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.6651084419863764
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 15,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.2651924570091069
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 15,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.4520996510109399
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 15,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.3999093530001119
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 15,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.4494863509899005
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 15,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.4247382519824896
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 16,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.4491397509991657
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 16,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.4936959500191733
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 16,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.3875587529910263
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 16,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.3088744560081977
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 16,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.4367016509932
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 16,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.4490544509899337
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 16,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.424463751987787
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 17,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.6769009419949725
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 17,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.34152225300204
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 17,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.3462516530125868
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 17,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.225145556993084
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 17,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.082979063008679
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 17,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.292068554990692
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 17,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.3003972550213803
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 18,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.3823720520013012
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 18,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.1851864580239635
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 18,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.1635634599952027
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 18,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.192910659010522
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 18,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.1414857610070612
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 18,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.0961718609905802
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 18,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.3217664410185535
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 19,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.448255834984593
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 19,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.4047637360054068
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 19,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.1344385459960904
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 19,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.3396462349919602
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 19,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.303361636993941
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 19,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.3093900370004121
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 19,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.041186349990312
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 20,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.4796157289820258
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 20,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.4919529279868584
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 20,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.36024133398314
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 20,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.1910973429912701
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 20,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.0203641509870067
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 20,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 0.9997701479878742
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 20,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 0.9576701530022547
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 21,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.624392069003079
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 21,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.66569983100635
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 21,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.5242860449943691
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 21,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.4184250569960568
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 21,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.3349761650024448
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 21,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.4810279500088654
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 21,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.5566478419932537
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 22,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.538661344005959
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 22,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.4440782530000433
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 22,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.4909015560115222
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 22,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.6672117490088567
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 22,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.2249964160146192
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 22,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.2664400170033332
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 22,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.3833455170097295
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 23,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.5444970079988707
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 23,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.5726814059889875
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 23,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.5722648049995769
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 23,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.40648301600595
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 23,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.433909115003189
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 23,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.5600740060035605
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 23,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.601259105023928
+    },
+    {
+      "policy": "durable",
+      "fault": "after_reply",
+      "repeat": 24,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.7734567040170077
+    },
+    {
+      "policy": "durable",
+      "fault": "before_begin",
+      "repeat": 24,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.753639412985649
+    },
+    {
+      "policy": "durable",
+      "fault": "after_result",
+      "repeat": 24,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.713775120995706
+    },
+    {
+      "policy": "durable",
+      "fault": "after_observation",
+      "repeat": 24,
+      "outcome": "completed",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.5843109269917477
+    },
+    {
+      "policy": "durable",
+      "fault": "before_effect",
+      "repeat": 24,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.241726642998401
+    },
+    {
+      "policy": "durable",
+      "fault": "after_effect",
+      "repeat": 24,
+      "outcome": "blocked",
+      "effect_writes": 1,
+      "resume_seconds_including_process_start": 1.3026522400032263
+    },
+    {
+      "policy": "durable",
+      "fault": "during_query",
+      "repeat": 24,
+      "outcome": "blocked",
+      "effect_writes": 0,
+      "resume_seconds_including_process_start": 1.3488616380200256
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 0,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.3685042370052543
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 1,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.8515567150025163
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 2,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.8240588159824256
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 3,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.2738635419809725
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 4,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.298718640988227
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 5,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.4493516350048594
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 6,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.4602590349968523
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 7,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.3960561379790306
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 8,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.345853940001689
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 9,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.295142642018618
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 10,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.8259697189787403
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 11,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.8425570180115756
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 12,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.8685873170034029
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 13,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.0727372519904748
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 14,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.0881887510186061
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 15,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.151453747996129
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 16,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.584639930020785
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 17,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.5875677340081893
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 18,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.8522862269892357
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 19,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.5440389389987104
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 20,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.7671123300096951
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 21,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.3737043459841516
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 22,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.3138355480041355
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 23,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.1020732560136821
+    },
+    {
+      "policy": "fresh_restart",
+      "fault": "after_effect",
+      "repeat": 24,
+      "outcome": "completed",
+      "effect_writes": 2,
+      "resume_seconds_including_process_start": 1.004079959995579
+    }
+  ],
+  "limits": [
+    "Repeats cover the same seven fault boundaries, not 175 distinct scenarios.",
+    "Blocked runs require operator reconciliation and are not successful task completions.",
+    "Fresh restart is unmodified DefaultAgent; does not represent every competing harness.",
+    "No external exactly-once guarantee, machine power-loss simulation, live model or SWE-bench evaluation."
+  ]
+}

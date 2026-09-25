@@ -20,3 +20,4 @@ jobs:
       - run: ruff check src/minisweagent/agents/durable.py src/minisweagent/harness src/minisweagent/run/extra/durable.py tests/harness
       - run: pytest tests/harness tests/agents/test_default.py tests/environments/test_local.py -q
       - run: python -m tests.harness.evaluate --output /tmp/recovery-report.json
+      - run: python -m tests.harness.benchmark --repeats 2 --workers 2 --output /tmp/repeated-recovery.json
