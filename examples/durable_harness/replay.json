@@ -1,0 +1,50 @@
+[
+  {
+    "role": "assistant",
+    "content": "Scripted harness demonstration, step 1",
+    "extra": {
+      "actions": [
+        {
+          "command": "cat stats.py && python -m pytest -q"
+        }
+      ],
+      "cost": 0
+    }
+  },
+  {
+    "role": "assistant",
+    "content": "Scripted harness demonstration, step 2",
+    "extra": {
+      "actions": [
+        {
+          "command": "python -c \"from pathlib import Path; p = Path('stats.py'); p.write_text(p.read_text().replace(' // ', ' / '))\""
+        }
+      ],
+      "cost": 0
+    }
+  },
+  {
+    "role": "assistant",
+    "content": "Scripted harness demonstration, step 3",
+    "extra": {
+      "actions": [
+        {
+          "command": "python -m pytest -q"
+        }
+      ],
+      "cost": 0
+    }
+  },
+  {
+    "role": "assistant",
+    "content": "Scripted harness demonstration, step 4",
+    "extra": {
+      "actions": [
+        {
+          "command": "printf 'COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT\\nFixed fractional and negative mean; three fixture tests pass.\\n'"
+        }
+      ],
+      "cost": 0
+    }
+  }
+]

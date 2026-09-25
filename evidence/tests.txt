@@ -1,0 +1,14 @@
+........................................................................ [ 73%]
+..........................                                               [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.14-final-0 _______________
+
+Name                                   Stmts   Miss  Cover   Missing
+--------------------------------------------------------------------
+src/minisweagent/agents/durable.py        91      8    91%   18, 54, 76-78, 114-116
+src/minisweagent/harness/__init__.py       0      0   100%
+src/minisweagent/harness/replay.py         5      0   100%
+src/minisweagent/harness/store.py         75      0   100%
+--------------------------------------------------------------------
+TOTAL                                    171      8    95%
+98 passed in 34.73s

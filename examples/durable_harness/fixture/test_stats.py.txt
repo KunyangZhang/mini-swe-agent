@@ -1,0 +1,15 @@
+import pytest
+from stats import mean
+
+
+def test_fractional_mean():
+    assert mean([1, 2]) == 1.5
+
+
+def test_negative_mean():
+    assert mean([-2, -1]) == -1.5
+
+
+def test_empty_values():
+    with pytest.raises(ValueError, match="empty"):
+        mean([])

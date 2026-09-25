@@ -1,0 +1,55 @@
+{
+  "generated_at": "2026-09-25T10:55:48.444693+00:00",
+  "python": "3.12.14",
+  "upstream_commit": "04d809ceab9df28f9adaed044884180159172930",
+  "evaluation_type": "scripted model, real local commands and abrupt child-process exits; not an LLM benchmark",
+  "cases": [
+    {
+      "crash_point": "after_reply",
+      "automatic_resume": "completed",
+      "writes_before_resolution": 1
+    },
+    {
+      "crash_point": "before_begin",
+      "automatic_resume": "completed",
+      "writes_before_resolution": 1
+    },
+    {
+      "crash_point": "after_result",
+      "automatic_resume": "completed",
+      "writes_before_resolution": 1
+    },
+    {
+      "crash_point": "after_observation",
+      "automatic_resume": "completed",
+      "writes_before_resolution": 1
+    },
+    {
+      "crash_point": "before_effect",
+      "automatic_resume": "blocked",
+      "writes_before_resolution": 0,
+      "after_verified_resolution": "completed"
+    },
+    {
+      "crash_point": "after_effect",
+      "automatic_resume": "blocked",
+      "writes_before_resolution": 1,
+      "after_verified_resolution": "completed"
+    },
+    {
+      "crash_point": "during_query",
+      "automatic_resume": "blocked",
+      "writes_before_resolution": 0
+    }
+  ],
+  "baseline": {
+    "policy": "unmodified DefaultAgent, fresh run after crash",
+    "crash_point": "after_effect",
+    "writes": 2
+  },
+  "limits": [
+    "No exactly-once guarantee for external effects",
+    "Model in-flight uncertainty stops the run",
+    "No SWE-bench or live-model quality measurement"
+  ]
+}

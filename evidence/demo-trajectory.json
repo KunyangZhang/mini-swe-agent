@@ -1,0 +1,124 @@
+{
+  "info": {
+    "model_stats": {
+      "instance_cost": 0.0,
+      "api_calls": 4
+    },
+    "config": {
+      "agent": {
+        "system_template": "You are a helpful assistant that can interact with a computer.\n\nYour response must contain exactly ONE bash code block with ONE command (or commands connected with && or ||).\nInclude a THOUGHT section before your command where you explain your reasoning process.\nFormat your response as shown in <format_example>.\n\n<format_example>\nYour reasoning and analysis here. Explain why you want to perform the action.\n\n```mswea_bash_command\nyour_command_here\n```\n</format_example>\n\nFailure to follow these rules will cause your response to be rejected.\n",
+        "instance_template": "Please solve this issue: {{task}}\n\nYou can execute bash commands and edit files to implement the necessary changes.\n\n## Recommended Workflow\n\nThis workflow should be done step-by-step so that you can iterate on your changes and any possible problems.\n\n1. Analyze the codebase by finding and reading relevant files\n2. Create a script to reproduce the issue\n3. Edit the source code to resolve the issue\n4. Verify your fix works by running your script again\n5. Test edge cases to ensure your fix is robust\n6. Submit your changes and finish your work by issuing the following command: `echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT`.\n   Do not combine it with any other command. <important>After this command, you cannot continue working on this task.</important>\n\n## Important Rules\n\n1. Every response must contain exactly one action\n2. The action must be enclosed in triple backticks\n3. Directory or environment variable changes are not persistent. Every action is executed in a new subshell.\n   However, you can prefix any action with `MY_ENV_VAR=MY_VALUE cd /path/to/working/dir && ...` or write/load environment variables from files\n\n<system_information>\n{{system}} {{release}} {{version}} {{machine}}\n</system_information>\n\n## Formatting your response\n\nHere is an example of a correct response:\n\n<example_response>\nTHOUGHT: I need to understand the structure of the repository first. Let me check what files are in the current directory to get a better understanding of the codebase.\n\n```mswea_bash_command\nls -la\n```\n</example_response>\n\n## Useful command examples\n\n### Create a new file:\n\n```mswea_bash_command\ncat <<'EOF' > newfile.py\nimport numpy as np\nhello = \"world\"\nprint(hello)\nEOF\n```\n\n### Edit files with sed:\n\n{%- if system == \"Darwin\" -%}\n<important>\nYou are on MacOS. For all the below examples, you need to use `sed -i ''` instead of `sed -i`.\n</important>\n{%- endif -%}\n\n```mswea_bash_command\n# Replace all occurrences\nsed -i 's/old_string/new_string/g' filename.py\n\n# Replace only first occurrence\nsed -i 's/old_string/new_string/' filename.py\n\n# Replace first occurrence on line 1\nsed -i '1s/old_string/new_string/' filename.py\n\n# Replace all occurrences in lines 1-10\nsed -i '1,10s/old_string/new_string/g' filename.py\n```\n\n### View file content:\n\n```mswea_bash_command\n# View specific lines with numbers\nnl -ba filename.py | sed -n '10,20p'\n```\n\n### Any other command you want to run\n\n```mswea_bash_command\nanything\n```\n",
+        "step_limit": 20,
+        "cost_limit": 1.0,
+        "wall_time_limit_seconds": 600,
+        "max_consecutive_format_errors": 3,
+        "output_path": "/root/resume/agent-harness-demo/session/trajectory.json"
+      },
+      "binding": "b21cb07571a8c484ec169ebd129ddcfe58acdced05618ebd7ba1457e7bb5bb0e"
+    },
+    "mini_version": "2.4.6",
+    "exit_status": "Submitted",
+    "submission": "Fixed fractional and negative mean; three fixture tests pass.\n",
+    "harness": {
+      "phase": "finished",
+      "journal_version": 1
+    }
+  },
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful assistant that can interact with a computer.\n\nYour response must contain exactly ONE bash code block with ONE command (or commands connected with && or ||).\nInclude a THOUGHT section before your command where you explain your reasoning process.\nFormat your response as shown in <format_example>.\n\n<format_example>\nYour reasoning and analysis here. Explain why you want to perform the action.\n\n```mswea_bash_command\nyour_command_here\n```\n</format_example>\n\nFailure to follow these rules will cause your response to be rejected."
+    },
+    {
+      "role": "user",
+      "content": "Please solve this issue: Fix mean for fractional and negative inputs\n\nYou can execute bash commands and edit files to implement the necessary changes.\n\n## Recommended Workflow\n\nThis workflow should be done step-by-step so that you can iterate on your changes and any possible problems.\n\n1. Analyze the codebase by finding and reading relevant files\n2. Create a script to reproduce the issue\n3. Edit the source code to resolve the issue\n4. Verify your fix works by running your script again\n5. Test edge cases to ensure your fix is robust\n6. Submit your changes and finish your work by issuing the following command: `echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT`.\n   Do not combine it with any other command. <important>After this command, you cannot continue working on this task.</important>\n\n## Important Rules\n\n1. Every response must contain exactly one action\n2. The action must be enclosed in triple backticks\n3. Directory or environment variable changes are not persistent. Every action is executed in a new subshell.\n   However, you can prefix any action with `MY_ENV_VAR=MY_VALUE cd /path/to/working/dir && ...` or write/load environment variables from files\n\n<system_information>\nLinux 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64\n</system_information>\n\n## Formatting your response\n\nHere is an example of a correct response:\n\n<example_response>\nTHOUGHT: I need to understand the structure of the repository first. Let me check what files are in the current directory to get a better understanding of the codebase.\n\n```mswea_bash_command\nls -la\n```\n</example_response>\n\n## Useful command examples\n\n### Create a new file:\n\n```mswea_bash_command\ncat <<'EOF' > newfile.py\nimport numpy as np\nhello = \"world\"\nprint(hello)\nEOF\n```\n\n### Edit files with sed:```mswea_bash_command\n# Replace all occurrences\nsed -i 's/old_string/new_string/g' filename.py\n\n# Replace only first occurrence\nsed -i 's/old_string/new_string/' filename.py\n\n# Replace first occurrence on line 1\nsed -i '1s/old_string/new_string/' filename.py\n\n# Replace all occurrences in lines 1-10\nsed -i '1,10s/old_string/new_string/g' filename.py\n```\n\n### View file content:\n\n```mswea_bash_command\n# View specific lines with numbers\nnl -ba filename.py | sed -n '10,20p'\n```\n\n### Any other command you want to run\n\n```mswea_bash_command\nanything\n```"
+    },
+    {
+      "role": "assistant",
+      "content": "Scripted harness demonstration, step 1",
+      "extra": {
+        "actions": [
+          {
+            "command": "cat stats.py && python -m pytest -q"
+          }
+        ],
+        "cost": 0
+      }
+    },
+    {
+      "role": "user",
+      "content": "<returncode>1</returncode>\n<output>\ndef mean(values):\n    if not values:\n        raise ValueError(\"values must not be empty\")\n    return sum(values) // len(values)\nFF.                                                                      [100%]\n=================================== FAILURES ===================================\n_____________________________ test_fractional_mean _____________________________\n\n    def test_fractional_mean():\n>       assert mean([1, 2]) == 1.5\nE       assert 1 == 1.5\nE        +  where 1 = mean([1, 2])\n\ntest_stats.py:6: AssertionError\n______________________________ test_negative_mean ______________________________\n\n    def test_negative_mean():\n>       assert mean([-2, -1]) == -1.5\nE       assert -2 == -1.5\nE        +  where -2 = mean([-2, -1])\n\ntest_stats.py:10: AssertionError\n=========================== short test summary info ============================\nFAILED test_stats.py::test_fractional_mean - assert 1 == 1.5\nFAILED test_stats.py::test_negative_mean - assert -2 == -1.5\n2 failed, 1 passed in 0.11s\n</output>",
+      "extra": {
+        "raw_output": "def mean(values):\n    if not values:\n        raise ValueError(\"values must not be empty\")\n    return sum(values) // len(values)\nFF.                                                                      [100%]\n=================================== FAILURES ===================================\n_____________________________ test_fractional_mean _____________________________\n\n    def test_fractional_mean():\n>       assert mean([1, 2]) == 1.5\nE       assert 1 == 1.5\nE        +  where 1 = mean([1, 2])\n\ntest_stats.py:6: AssertionError\n______________________________ test_negative_mean ______________________________\n\n    def test_negative_mean():\n>       assert mean([-2, -1]) == -1.5\nE       assert -2 == -1.5\nE        +  where -2 = mean([-2, -1])\n\ntest_stats.py:10: AssertionError\n=========================== short test summary info ============================\nFAILED test_stats.py::test_fractional_mean - assert 1 == 1.5\nFAILED test_stats.py::test_negative_mean - assert -2 == -1.5\n2 failed, 1 passed in 0.11s\n",
+        "returncode": 1,
+        "timestamp": 1790333906.297532,
+        "exception_info": ""
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Scripted harness demonstration, step 2",
+      "extra": {
+        "actions": [
+          {
+            "command": "python -c \"from pathlib import Path; p = Path('stats.py'); p.write_text(p.read_text().replace(' // ', ' / '))\""
+          }
+        ],
+        "cost": 0
+      }
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n</output>",
+      "extra": {
+        "raw_output": "",
+        "returncode": 0,
+        "timestamp": 1790333906.4216871,
+        "exception_info": ""
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Scripted harness demonstration, step 3",
+      "extra": {
+        "actions": [
+          {
+            "command": "python -m pytest -q"
+          }
+        ],
+        "cost": 0
+      }
+    },
+    {
+      "role": "user",
+      "content": "<returncode>0</returncode>\n<output>\n...                                                                      [100%]\n3 passed in 0.02s\n</output>",
+      "extra": {
+        "raw_output": "...                                                                      [100%]\n3 passed in 0.02s\n",
+        "returncode": 0,
+        "timestamp": 1790333907.532557,
+        "exception_info": ""
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Scripted harness demonstration, step 4",
+      "extra": {
+        "actions": [
+          {
+            "command": "printf 'COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT\\nFixed fractional and negative mean; three fixture tests pass.\\n'"
+          }
+        ],
+        "cost": 0
+      }
+    },
+    {
+      "role": "exit",
+      "content": "Fixed fractional and negative mean; three fixture tests pass.\n",
+      "extra": {
+        "exit_status": "Submitted",
+        "submission": "Fixed fractional and negative mean; three fixture tests pass.\n"
+      }
+    }
+  ],
+  "trajectory_format": "mini-swe-agent-1.1"
+}
