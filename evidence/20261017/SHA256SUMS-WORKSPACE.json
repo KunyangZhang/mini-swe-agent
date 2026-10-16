@@ -115,5 +115,7 @@
   "workspace-raw.tar.gz": "e5c99af0229f8f89a7a16076c07a75472bb9244836ef6742bd1bcecbc214500b",
   "workspace-regression.txt": "8059e7de821c21b9cbf8933f313d3ab7567d4ab79b733e199f0a9e623fbbea30",
   "workspace-regression.xml": "e1815ad25828d6546d37a1cb34181a9f8ef9aaba6bf58a94c74e814749618be5",
-  "workspace-source.json": "3d8e752073e454163f8236b50f07bbc4aceb7e070d9cfbea1c7ca913094b43b3"
+  "workspace-remote-regression.txt": "f27ef96eae378e853c7569ecf177ed5951b2eeb02506e2bb361fb3f7b94dcb32",
+  "workspace-remote-regression.xml": "9616d094bb87672293e2467c73f065494206140a13d81d23462615d5aa506515",
+  "workspace-source.json": "0367ba7b1a2608ce27152e319f3230d0505ee26b54c5c84a0b94ea56658f5d4a"
 }

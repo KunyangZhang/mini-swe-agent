@@ -6,5 +6,7 @@
     "tests/harness/workspace_campaign.py": "b50315309414882e1abe5232e05b6df3d0807e2061a221407ffe5127d1a7767b",
     "tests/harness/test_workspace_binding.py": "720893c66103db390c5c6e2e11106e95577379db8310dc2d49249789c63f8586"
   },
-  "note": "Before-campaign worker was formatted later; runtime change is local.py serialization. Acceptance also extracts original 1f17d23 source and proves five failures."
+  "note": "Before-campaign worker was formatted later; runtime change is local.py serialization. Acceptance also extracts original 1f17d23 source and proves five failures.",
+  "remote_runtime_commit": "4a23f5d3862c5ff775905fe1736b89aac8772825",
+  "remote_runtime_source_matches": true
 }

@@ -1,6 +1,6 @@
 # 追加实验：恢复到了错误的工作目录
 
-本轮发现并修复第三类问题：默认工作目录或相对路径只有字符串被绑定，没有绑定实际目录。新增两条失败复现及一个绝对路径对照；相关测试从 104 项增至 107 项。前轮两项修复、六案例编码实验和真实模型负面结果仍保留，详见 [前轮报告](durable-20261017-zh.md)。
+本轮发现并修复第三类问题：默认工作目录或相对路径只有字符串被绑定，没有绑定实际目录。新增两条失败复现及一个绝对路径对照；相关测试从 104 项增至 107 项，WSL 和 AutoDL 均通过。前轮两项修复、六案例编码实验和真实模型负面结果仍保留，详见 [前轮报告](durable-20261017-zh.md)。
 
 ## 问题是怎样发生的
 
@@ -27,7 +27,7 @@
 - `evidence/20261017/workspace-before-tests.txt`、`workspace-before.xml`：修复前失败断言。
 - `workspace-before/report.json`、`workspace-after/report.json`：三个条件逐项对照。
 - `workspace-raw.tar.gz`：完整工作区、SQLite 日志、进程输出、源码和验收记录。
-- `workspace-regression.txt/xml`：本地完整回归。
+- `workspace-regression.txt/xml`：本地完整回归；`workspace-remote-regression.txt/xml`：AutoDL 同源码 107 项通过。
 - `acceptance-workspace.txt`：从 Git 提取原代码的端到端验收。
 
 运行 `HARNESS_PYTHON=/path/to/python bash scripts/accept_durable.sh` 即可重现前后断言和工作目录编码实验。`--full` 额外执行原项目的重复实验，不把重复次数当成新边界。
