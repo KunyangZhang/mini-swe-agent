@@ -2,6 +2,7 @@ import os
 import platform
 import signal
 import subprocess
+from pathlib import Path
 from typing import Any
 
 from pydantic import BaseModel
@@ -62,7 +63,8 @@ class LocalEnvironment:
         return {
             "info": {
                 "config": {
-                    "environment": self.config.model_dump(mode="json"),
+                    "environment": self.config.model_dump(mode="json")
+                    | {"cwd": str(Path(self.config.cwd or os.getcwd()).resolve())},
                     "environment_type": f"{self.__class__.__module__}.{self.__class__.__name__}",
                 }
             }

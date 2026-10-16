@@ -12,20 +12,21 @@ HARNESS_PYTHON='/mnt/e/Codex/简历/Coding-Agent-Harness/.venv-harness/bin/pytho
 
 命令必须退出 0，并打印 `Acceptance passed` 和新产物目录。默认产物位于项目旁的 `acceptance/run-*`，不会覆盖已提交的实验。约数分钟；不用联网、不用 GPU、不用凭据。它会：
 
-1. 从 Git 取原提交的 src，用当前的三条边界测试复现 **恰好三个失败**，并确认不是测试加载错误。
-2. 在修复版本执行 **104 项相关测试**。
+1. 从 Git 取原提交的 src，复现 **恰好五个失败**（原三条与默认/相对工作目录两条）；绝对目录对照通过，并确认不是测试加载错误。
+2. 在修复版本执行 **107 项相关测试**。
 3. 复现原七位置实验。
 4. 重做六个编码案例：真实源码修改、8 项测试、执行次数、核验恢复、重复副作用对照，以及预期失败的工作区漂移负例。负例被正确识别为失败时，实验验收通过。
-5. 使用 `--full` 时复现原 25 次重复实验；这些重复不算新增场景。
+5. 重做三种工作目录配置的恢复编码实验，验证错误目录拒绝和原目录继续完成。
+6. 使用 `--full` 时复现原 25 次重复实验；这些重复不算新增场景。
 
 只想快速检查修复：
 
 ```bash
 '/mnt/e/Codex/简历/Coding-Agent-Harness/.venv-harness/bin/python' \
-  -m pytest tests/harness/test_boundaries.py -q
+  -m pytest tests/harness/test_boundaries.py tests/harness/test_workspace_binding.py -q
 ```
 
-预期 `6 passed`。从两个不同进程恢复同一批次时，只有持锁进程可以执行；锁争抢失败不是任务失败率样本。
+预期 `9 passed`。从两个不同进程恢复同一批次时，只有持锁进程可以执行；锁争抢失败不是任务失败率样本。
 
 ## 在新的 Linux/WSL 环境
 
@@ -44,6 +45,7 @@ HARNESS_PYTHON="$PWD/.venv/bin/python" bash scripts/accept_durable.sh --full
 ## 证据入口
 
 - `docs/experiments/durable-20261017-zh.md`：问题、改动、条件、结果、限制。
+- `docs/experiments/durable-workspace-zh.md`：后续发现的工作目录绑定问题及修复证据。
 - `docs/experiments/durable-resume-interview-zh.md`：基于证据的简历和面试稿。
 - `evidence/20261017/`：原测试复现、失败复现、回归、编码逐案例、真实模型轨迹、环境与版本。
 - 原有结果仍在 `evidence/recovery-report.json`、`evidence/repeated-recovery.json` 等文件，本次未覆盖它们。

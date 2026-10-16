@@ -19,8 +19,8 @@ from importlib.metadata import distributions
 print("\n".join(sorted(d.metadata["Name"] + "==" + d.version for d in distributions())))
 PYDEPS
 git archive "$BASE" src | tar -x -C "$OUTPUT/base"
-if PYTHONPATH="$OUTPUT/base/src:$REPO" "$PYTHON" -m pytest tests/harness/test_boundaries.py -q \
-    -k 'successful_batch or expired_pending or expired_mid' --basetemp="$OUTPUT/before-temp" \
+if PYTHONPATH="$OUTPUT/base/src:$REPO" "$PYTHON" -m pytest tests/harness/test_boundaries.py tests/harness/test_workspace_binding.py -q \
+    -k 'successful_batch or expired_pending or expired_mid or resume_binds_actual_workspace' --basetemp="$OUTPUT/before-temp" \
     --junitxml="$OUTPUT/before-fix.xml" > "$OUTPUT/before-fix.txt" 2>&1; then
     echo 'ERROR: original code unexpectedly passed the failure reproductions'; exit 1
 else
@@ -31,14 +31,15 @@ fi
 import sys
 import xml.etree.ElementTree as ET
 root = ET.parse(sys.argv[1]).getroot()
-assert len(root.findall('.//testcase/failure')) == 3
+assert len(root.findall('.//testcase/failure')) == 5
 assert len(root.findall('.//testcase/error')) == 0
-print('Verified: original commit fails exactly the three boundary reproductions.')
+print('Verified: original commit fails exactly five boundary reproductions; absolute-cwd control passes.')
 PY
 "$PYTHON" -m pytest tests/harness tests/agents/test_default.py tests/environments/test_local.py -q \
     --basetemp="$OUTPUT/pytest-temp" --junitxml="$OUTPUT/regression.xml" 2>&1 | tee "$OUTPUT/regression.txt"
 "$PYTHON" -m tests.harness.evaluate --output "$OUTPUT/original-seven.json" 2>&1 | tee "$OUTPUT/original-seven.txt"
 "$PYTHON" -m tests.harness.coding_campaign --output "$OUTPUT/coding" 2>&1 | tee "$OUTPUT/coding.txt"
+"$PYTHON" -m tests.harness.workspace_campaign --output "$OUTPUT/workspace" 2>&1 | tee "$OUTPUT/workspace.txt"
 if [[ "${1:-}" == '--full' ]]; then
     "$PYTHON" -m tests.harness.benchmark --repeats 25 --workers 4 --output "$OUTPUT/original-repeated.json" \
         2>&1 | tee "$OUTPUT/original-repeated.txt"
