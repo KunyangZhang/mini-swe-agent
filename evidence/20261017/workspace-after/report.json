@@ -1,0 +1,173 @@
+[
+  {
+    "mode": "default",
+    "processes": {
+      "interruption": {
+        "returncode": 77,
+        "seconds": 1.4545598889999383,
+        "command": [
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+          "-m",
+          "tests.harness.workspace_campaign",
+          "--worker",
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/workspace-after/default",
+          "--mode",
+          "default"
+        ],
+        "cwd": "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/workspace-after/default/original",
+        "rejected_binding": false
+      },
+      "changed-launcher": {
+        "returncode": 1,
+        "seconds": 1.4568791069996223,
+        "command": [
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+          "-m",
+          "tests.harness.workspace_campaign",
+          "--worker",
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/workspace-after/default",
+          "--mode",
+          "default"
+        ],
+        "cwd": "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/workspace-after/default/other",
+        "rejected_binding": true
+      },
+      "original-launcher": {
+        "returncode": 0,
+        "seconds": 4.828981843000292,
+        "command": [
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+          "-m",
+          "tests.harness.workspace_campaign",
+          "--worker",
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/workspace-after/default",
+          "--mode",
+          "default"
+        ],
+        "cwd": "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/workspace-after/default/original",
+        "rejected_binding": false
+      }
+    },
+    "original_task_passed": true,
+    "original_tool_executions": 4,
+    "other_tool_executions": 0,
+    "original_patch_writes": 1,
+    "other_patch_writes": 0,
+    "api_cost_usd": null,
+    "model": "scripted ReplayModel"
+  },
+  {
+    "mode": "relative",
+    "processes": {
+      "interruption": {
+        "returncode": 77,
+        "seconds": 1.4552776910004468,
+        "command": [
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+          "-m",
+          "tests.harness.workspace_campaign",
+          "--worker",
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/workspace-after/relative",
+          "--mode",
+          "relative"
+        ],
+        "cwd": "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/workspace-after/relative/original",
+        "rejected_binding": false
+      },
+      "changed-launcher": {
+        "returncode": 1,
+        "seconds": 1.4633148739994795,
+        "command": [
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+          "-m",
+          "tests.harness.workspace_campaign",
+          "--worker",
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/workspace-after/relative",
+          "--mode",
+          "relative"
+        ],
+        "cwd": "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/workspace-after/relative/other",
+        "rejected_binding": true
+      },
+      "original-launcher": {
+        "returncode": 0,
+        "seconds": 4.963970745000552,
+        "command": [
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+          "-m",
+          "tests.harness.workspace_campaign",
+          "--worker",
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/workspace-after/relative",
+          "--mode",
+          "relative"
+        ],
+        "cwd": "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/workspace-after/relative/original",
+        "rejected_binding": false
+      }
+    },
+    "original_task_passed": true,
+    "original_tool_executions": 4,
+    "other_tool_executions": 0,
+    "original_patch_writes": 1,
+    "other_patch_writes": 0,
+    "api_cost_usd": null,
+    "model": "scripted ReplayModel"
+  },
+  {
+    "mode": "absolute",
+    "processes": {
+      "interruption": {
+        "returncode": 77,
+        "seconds": 1.475390408999374,
+        "command": [
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+          "-m",
+          "tests.harness.workspace_campaign",
+          "--worker",
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/workspace-after/absolute",
+          "--mode",
+          "absolute"
+        ],
+        "cwd": "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/workspace-after/absolute/original",
+        "rejected_binding": false
+      },
+      "changed-launcher": {
+        "returncode": 0,
+        "seconds": 5.102819951999663,
+        "command": [
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+          "-m",
+          "tests.harness.workspace_campaign",
+          "--worker",
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/workspace-after/absolute",
+          "--mode",
+          "absolute"
+        ],
+        "cwd": "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/workspace-after/absolute/other",
+        "rejected_binding": false
+      },
+      "original-launcher": {
+        "returncode": 0,
+        "seconds": 1.4549715170005584,
+        "command": [
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+          "-m",
+          "tests.harness.workspace_campaign",
+          "--worker",
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/workspace-after/absolute",
+          "--mode",
+          "absolute"
+        ],
+        "cwd": "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/workspace-after/absolute/original",
+        "rejected_binding": false
+      }
+    },
+    "original_task_passed": true,
+    "original_tool_executions": 4,
+    "other_tool_executions": 0,
+    "original_patch_writes": 1,
+    "other_patch_writes": 0,
+    "api_cost_usd": null,
+    "model": "scripted ReplayModel"
+  }
+]

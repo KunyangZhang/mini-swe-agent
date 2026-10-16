@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/e/Codex/简历/Coding-Agent-Harness/mini-swe-agent/tests/harness/workspace_campaign.py", line 109, in <module>
+    worker(args.worker, args.mode)
+  File "/mnt/e/Codex/简历/Coding-Agent-Harness/mini-swe-agent/tests/harness/workspace_campaign.py", line 35, in worker
+    print(json.dumps(agent.run(TASK)))
+                     ^^^^^^^^^^^^^^^
+  File "/mnt/e/Codex/简历/Coding-Agent-Harness/mini-swe-agent/src/minisweagent/agents/durable.py", line 54, in run
+    raise ValueError("Run configuration or task changed; use the original settings or a new run directory")
+ValueError: Run configuration or task changed; use the original settings or a new run directory

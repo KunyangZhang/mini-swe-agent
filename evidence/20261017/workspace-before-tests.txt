@@ -1,0 +1,32 @@
+FF.                                                                      [100%]
+=================================== FAILURES ===================================
+______ test_resume_binds_actual_workspace_not_launcher_spelling[default] _______
+
+tmp_path = PosixPath('/mnt/e/Codex/简历/Coding-Agent-Harness/harness-work/workspace-before-tests/test_resume_binds_actual_works0')
+mode = 'default'
+
+    @pytest.mark.parametrize(("mode",), [("default",), ("relative",), ("absolute",)])  # noqa: PT006
+    def test_resume_binds_actual_workspace_not_launcher_spelling(tmp_path, mode):
+        result = run_case(tmp_path / mode, mode)
+        assert result["processes"]["interruption"]["returncode"] == 77
+>       assert result["processes"]["changed-launcher"]["rejected_binding"] == (mode != "absolute")
+E       AssertionError: assert False == ('default' != 'absolute')
+
+tests/harness/test_workspace_binding.py:10: AssertionError
+______ test_resume_binds_actual_workspace_not_launcher_spelling[relative] ______
+
+tmp_path = PosixPath('/mnt/e/Codex/简历/Coding-Agent-Harness/harness-work/workspace-before-tests/test_resume_binds_actual_works1')
+mode = 'relative'
+
+    @pytest.mark.parametrize(("mode",), [("default",), ("relative",), ("absolute",)])  # noqa: PT006
+    def test_resume_binds_actual_workspace_not_launcher_spelling(tmp_path, mode):
+        result = run_case(tmp_path / mode, mode)
+        assert result["processes"]["interruption"]["returncode"] == 77
+>       assert result["processes"]["changed-launcher"]["rejected_binding"] == (mode != "absolute")
+E       AssertionError: assert False == ('relative' != 'absolute')
+
+tests/harness/test_workspace_binding.py:10: AssertionError
+=========================== short test summary info ============================
+FAILED tests/harness/test_workspace_binding.py::test_resume_binds_actual_workspace_not_launcher_spelling[default]
+FAILED tests/harness/test_workspace_binding.py::test_resume_binds_actual_workspace_not_launcher_spelling[relative]
+2 failed, 1 passed in 28.89s

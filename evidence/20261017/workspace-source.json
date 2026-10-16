@@ -1,0 +1,10 @@
+{
+  "before_runtime": "6935d8bbe41b7e4a77926a295f451755a5a21975",
+  "after_runtime": "4a23f5d3862c5ff775905fe1736b89aac8772825",
+  "source": {
+    "src/minisweagent/environments/local.py": "909b305ca26b8fb7d4e1068833d676ecbf06b189c6d5815ec6cecbec7bf4f787",
+    "tests/harness/workspace_campaign.py": "b50315309414882e1abe5232e05b6df3d0807e2061a221407ffe5127d1a7767b",
+    "tests/harness/test_workspace_binding.py": "720893c66103db390c5c6e2e11106e95577379db8310dc2d49249789c63f8586"
+  },
+  "note": "Before-campaign worker was formatted later; runtime change is local.py serialization. Acceptance also extracts original 1f17d23 source and proves five failures."
+}

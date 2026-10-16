@@ -1,0 +1,20 @@
+{
+  "phase": "executing",
+  "model_calls": 1,
+  "known_cost": 0.0,
+  "actions": [],
+  "events": [
+    {
+      "sequence": 1,
+      "at": "2026-10-16T21:57:43.637Z",
+      "kind": "checkpoint",
+      "payload": "{\"calls\": 0, \"cost\": 0.0, \"phase\": \"querying\"}"
+    },
+    {
+      "sequence": 2,
+      "at": "2026-10-16T21:57:43.643Z",
+      "kind": "checkpoint",
+      "payload": "{\"calls\": 1, \"cost\": 0.0, \"phase\": \"executing\"}"
+    }
+  ]
+}

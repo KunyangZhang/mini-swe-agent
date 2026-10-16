@@ -1,0 +1,86 @@
+F.F.F.FF                                                                 [100%]
+=================================== FAILURES ===================================
+_______________________ test_chunks[values0-2-expected0] _______________________
+
+values = [1, 2, 3, 4, 5], size = 2, expected = [[1, 2], [3, 4], [5]]
+
+    @pytest.mark.parametrize(('values', 'size', 'expected'), [
+        ([1, 2, 3, 4, 5], 2, [[1, 2], [3, 4], [5]]),
+        ([], 3, []),
+        ([1], 4, [[1]]),
+        ([1, 2], 1, [[1], [2]]),
+    ])
+    def test_chunks(values, size, expected):
+        original = values.copy()
+>       assert chunked(values, size) == expected
+E       assert [[1, 2], [3, 4]] == [[1, 2], [3, 4], [5]]
+E         
+E         Right contains one more item: [5]
+E         Use -v to get more diff
+
+test_chunking.py:13: AssertionError
+_______________________ test_chunks[values2-4-expected2] _______________________
+
+values = [1], size = 4, expected = [[1]]
+
+    @pytest.mark.parametrize(('values', 'size', 'expected'), [
+        ([1, 2, 3, 4, 5], 2, [[1, 2], [3, 4], [5]]),
+        ([], 3, []),
+        ([1], 4, [[1]]),
+        ([1, 2], 1, [[1], [2]]),
+    ])
+    def test_chunks(values, size, expected):
+        original = values.copy()
+>       assert chunked(values, size) == expected
+E       assert [] == [[1]]
+E         
+E         Right contains one more item: [1]
+E         Use -v to get more diff
+
+test_chunking.py:13: AssertionError
+________________________________ test_generator ________________________________
+
+    def test_generator():
+>       assert chunked((i for i in range(5)), 3) == [[0, 1, 2], [3, 4]]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_chunking.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = <generator object test_generator.<locals>.<genexpr> at 0x726a2b75a8c0>
+size = 3
+
+    def chunked(values, size):
+>       return [values[i:i + size] for i in range(0, len(values) - size + 1, size)]
+                                                     ^^^^^^^^^^^
+E       TypeError: object of type 'generator' has no len()
+
+chunking.py:2: TypeError
+____________________________ test_invalid_size[-1] _____________________________
+
+size = -1
+
+    @pytest.mark.parametrize(('size',), [(0,), (-1,)])
+    def test_invalid_size(size):
+>       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+test_chunking.py:23: Failed
+___________________________ test_tuple_returns_lists ___________________________
+
+    def test_tuple_returns_lists():
+>       assert chunked((1, 2, 3), 2) == [[1, 2], [3]]
+E       assert [(1, 2)] == [[1, 2], [3]]
+E         
+E         At index 0 diff: (1, 2) != [1, 2]
+E         Right contains one more item: [3]
+E         Use -v to get more diff
+
+test_chunking.py:28: AssertionError
+=========================== short test summary info ============================
+FAILED test_chunking.py::test_chunks[values0-2-expected0] - assert [[1, 2], [...
+FAILED test_chunking.py::test_chunks[values2-4-expected2] - assert [] == [[1]]
+FAILED test_chunking.py::test_generator - TypeError: object of type 'generato...
+FAILED test_chunking.py::test_invalid_size[-1] - Failed: DID NOT RAISE ValueE...
+FAILED test_chunking.py::test_tuple_returns_lists - assert [(1, 2)] == [[1, 2...
+5 failed, 3 passed in 0.64s

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="3" time="28.874" timestamp="2026-10-17T05:57:39.890252+08:00" hostname="WIN-T4U23U5ST3M"><testcase classname="tests.harness.test_workspace_binding" name="test_resume_binds_actual_workspace_not_launcher_spelling[default]" time="9.676"><failure message="AssertionError: assert False == ('default' != 'absolute')">tmp_path = PosixPath('/mnt/e/Codex/简历/Coding-Agent-Harness/harness-work/workspace-before-tests/test_resume_binds_actual_works0')
+mode = 'default'
+
+    @pytest.mark.parametrize(("mode",), [("default",), ("relative",), ("absolute",)])  # noqa: PT006
+    def test_resume_binds_actual_workspace_not_launcher_spelling(tmp_path, mode):
+        result = run_case(tmp_path / mode, mode)
+        assert result["processes"]["interruption"]["returncode"] == 77
+&gt;       assert result["processes"]["changed-launcher"]["rejected_binding"] == (mode != "absolute")
+E       AssertionError: assert False == ('default' != 'absolute')
+
+tests/harness/test_workspace_binding.py:10: AssertionError</failure></testcase><testcase classname="tests.harness.test_workspace_binding" name="test_resume_binds_actual_workspace_not_launcher_spelling[relative]" time="9.098"><failure message="AssertionError: assert False == ('relative' != 'absolute')">tmp_path = PosixPath('/mnt/e/Codex/简历/Coding-Agent-Harness/harness-work/workspace-before-tests/test_resume_binds_actual_works1')
+mode = 'relative'
+
+    @pytest.mark.parametrize(("mode",), [("default",), ("relative",), ("absolute",)])  # noqa: PT006
+    def test_resume_binds_actual_workspace_not_launcher_spelling(tmp_path, mode):
+        result = run_case(tmp_path / mode, mode)
+        assert result["processes"]["interruption"]["returncode"] == 77
+&gt;       assert result["processes"]["changed-launcher"]["rejected_binding"] == (mode != "absolute")
+E       AssertionError: assert False == ('relative' != 'absolute')
+
+tests/harness/test_workspace_binding.py:10: AssertionError</failure></testcase><testcase classname="tests.harness.test_workspace_binding" name="test_resume_binds_actual_workspace_not_launcher_spelling[absolute]" time="8.489" /></testsuite></testsuites>

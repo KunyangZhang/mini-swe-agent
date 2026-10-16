@@ -1,0 +1,11 @@
+from itertools import islice
+
+
+def chunked(values, size):
+    if size <= 0:
+        raise ValueError("size must be positive")
+    iterator = iter(values)
+    chunks = []
+    while chunk := list(islice(iterator, size)):
+        chunks.append(chunk)
+    return chunks

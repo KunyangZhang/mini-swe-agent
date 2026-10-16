@@ -1,0 +1,330 @@
+Verified: original commit fails exactly five boundary reproductions; absolute-cwd control passes.
+........................................................................ [ 67%]
+...................................                                      [100%]
+107 passed in 86.49s (0:01:26)
+{
+  "generated_at": "2026-10-16T22:03:20.868304+00:00",
+  "python": "3.12.3",
+  "upstream_commit": "04d809ceab9df28f9adaed044884180159172930",
+  "evaluation_type": "scripted model, real local commands and abrupt child-process exits; not an LLM benchmark",
+  "cases": [
+    {
+      "crash_point": "after_reply",
+      "automatic_resume": "completed",
+      "writes_before_resolution": 1
+    },
+    {
+      "crash_point": "before_begin",
+      "automatic_resume": "completed",
+      "writes_before_resolution": 1
+    },
+    {
+      "crash_point": "after_result",
+      "automatic_resume": "completed",
+      "writes_before_resolution": 1
+    },
+    {
+      "crash_point": "after_observation",
+      "automatic_resume": "completed",
+      "writes_before_resolution": 1
+    },
+    {
+      "crash_point": "before_effect",
+      "automatic_resume": "blocked",
+      "writes_before_resolution": 0,
+      "after_verified_resolution": "completed"
+    },
+    {
+      "crash_point": "after_effect",
+      "automatic_resume": "blocked",
+      "writes_before_resolution": 1,
+      "after_verified_resolution": "completed"
+    },
+    {
+      "crash_point": "during_query",
+      "automatic_resume": "blocked",
+      "writes_before_resolution": 0
+    }
+  ],
+  "baseline": {
+    "policy": "unmodified DefaultAgent, fresh run after crash",
+    "crash_point": "after_effect",
+    "writes": 2
+  },
+  "limits": [
+    "No exactly-once guarantee for external effects",
+    "Model in-flight uncertainty stops the run",
+    "No SWE-bench or live-model quality measurement"
+  ]
+}
+{
+  "scope": "scripted mechanism experiment; actual Python edits and pytest; no live model/API",
+  "python": "3.12.3",
+  "cases": [
+    {
+      "case": "uninterrupted",
+      "policy": "durable",
+      "automatic_completed": true,
+      "required_verified_resolution": false,
+      "final_task_success": true,
+      "agent_submitted": true,
+      "actual_tool_executions": 4,
+      "actual_scripted_model_calls": 2,
+      "patch_writes": 1,
+      "duplicate_patch_writes": 0,
+      "api_calls": 0,
+      "api_cost_usd": null,
+      "test_file_unchanged": true
+    },
+    {
+      "case": "batch_after_patch_result",
+      "policy": "durable",
+      "automatic_completed": true,
+      "required_verified_resolution": false,
+      "final_task_success": true,
+      "agent_submitted": true,
+      "actual_tool_executions": 4,
+      "actual_scripted_model_calls": 2,
+      "patch_writes": 1,
+      "duplicate_patch_writes": 0,
+      "api_calls": 0,
+      "api_cost_usd": null,
+      "test_file_unchanged": true
+    },
+    {
+      "case": "before_observation_checkpoint",
+      "policy": "durable",
+      "automatic_completed": true,
+      "required_verified_resolution": false,
+      "final_task_success": true,
+      "agent_submitted": true,
+      "actual_tool_executions": 4,
+      "actual_scripted_model_calls": 2,
+      "patch_writes": 1,
+      "duplicate_patch_writes": 0,
+      "api_calls": 0,
+      "api_cost_usd": null,
+      "test_file_unchanged": true
+    },
+    {
+      "case": "manual_after_patch_effect",
+      "policy": "durable",
+      "automatic_completed": false,
+      "required_verified_resolution": true,
+      "final_task_success": true,
+      "agent_submitted": true,
+      "actual_tool_executions": 4,
+      "actual_scripted_model_calls": 2,
+      "patch_writes": 1,
+      "duplicate_patch_writes": 0,
+      "api_calls": 0,
+      "api_cost_usd": null,
+      "test_file_unchanged": true
+    },
+    {
+      "case": "fresh_restart_after_patch_effect",
+      "policy": "fresh DefaultAgent restart",
+      "automatic_completed": true,
+      "required_verified_resolution": false,
+      "final_task_success": true,
+      "agent_submitted": true,
+      "actual_tool_executions": 6,
+      "actual_scripted_model_calls": 3,
+      "patch_writes": 2,
+      "duplicate_patch_writes": 1,
+      "api_calls": 0,
+      "api_cost_usd": null,
+      "test_file_unchanged": true
+    },
+    {
+      "case": "workspace_drift_negative",
+      "policy": "durable",
+      "automatic_completed": false,
+      "required_verified_resolution": false,
+      "final_task_success": false,
+      "agent_submitted": true,
+      "actual_tool_executions": 4,
+      "actual_scripted_model_calls": 2,
+      "patch_writes": 1,
+      "duplicate_patch_writes": 0,
+      "api_calls": 0,
+      "api_cost_usd": null,
+      "test_file_unchanged": true
+    }
+  ],
+  "resource_notes": "Per invocation wall/CPU timings; maxrss is cumulative child high-water mark, not per-case peak."
+}
+[
+  {
+    "mode": "default",
+    "processes": {
+      "interruption": {
+        "returncode": 77,
+        "seconds": 1.393389854999441,
+        "command": [
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+          "-m",
+          "tests.harness.workspace_campaign",
+          "--worker",
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/acceptance/run-Izoj63/workspace/default",
+          "--mode",
+          "default"
+        ],
+        "cwd": "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/acceptance/run-Izoj63/workspace/default/original",
+        "rejected_binding": false
+      },
+      "changed-launcher": {
+        "returncode": 1,
+        "seconds": 1.384778605000065,
+        "command": [
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+          "-m",
+          "tests.harness.workspace_campaign",
+          "--worker",
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/acceptance/run-Izoj63/workspace/default",
+          "--mode",
+          "default"
+        ],
+        "cwd": "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/acceptance/run-Izoj63/workspace/default/other",
+        "rejected_binding": true
+      },
+      "original-launcher": {
+        "returncode": 0,
+        "seconds": 4.333775338999658,
+        "command": [
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+          "-m",
+          "tests.harness.workspace_campaign",
+          "--worker",
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/acceptance/run-Izoj63/workspace/default",
+          "--mode",
+          "default"
+        ],
+        "cwd": "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/acceptance/run-Izoj63/workspace/default/original",
+        "rejected_binding": false
+      }
+    },
+    "original_task_passed": true,
+    "original_tool_executions": 4,
+    "other_tool_executions": 0,
+    "original_patch_writes": 1,
+    "other_patch_writes": 0,
+    "api_cost_usd": null,
+    "model": "scripted ReplayModel"
+  },
+  {
+    "mode": "relative",
+    "processes": {
+      "interruption": {
+        "returncode": 77,
+        "seconds": 1.376544625999486,
+        "command": [
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+          "-m",
+          "tests.harness.workspace_campaign",
+          "--worker",
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/acceptance/run-Izoj63/workspace/relative",
+          "--mode",
+          "relative"
+        ],
+        "cwd": "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/acceptance/run-Izoj63/workspace/relative/original",
+        "rejected_binding": false
+      },
+      "changed-launcher": {
+        "returncode": 1,
+        "seconds": 1.372523387000001,
+        "command": [
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+          "-m",
+          "tests.harness.workspace_campaign",
+          "--worker",
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/acceptance/run-Izoj63/workspace/relative",
+          "--mode",
+          "relative"
+        ],
+        "cwd": "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/acceptance/run-Izoj63/workspace/relative/other",
+        "rejected_binding": true
+      },
+      "original-launcher": {
+        "returncode": 0,
+        "seconds": 4.314967327999511,
+        "command": [
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+          "-m",
+          "tests.harness.workspace_campaign",
+          "--worker",
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/acceptance/run-Izoj63/workspace/relative",
+          "--mode",
+          "relative"
+        ],
+        "cwd": "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/acceptance/run-Izoj63/workspace/relative/original",
+        "rejected_binding": false
+      }
+    },
+    "original_task_passed": true,
+    "original_tool_executions": 4,
+    "other_tool_executions": 0,
+    "original_patch_writes": 1,
+    "other_patch_writes": 0,
+    "api_cost_usd": null,
+    "model": "scripted ReplayModel"
+  },
+  {
+    "mode": "absolute",
+    "processes": {
+      "interruption": {
+        "returncode": 77,
+        "seconds": 1.3862580649993106,
+        "command": [
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+          "-m",
+          "tests.harness.workspace_campaign",
+          "--worker",
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/acceptance/run-Izoj63/workspace/absolute",
+          "--mode",
+          "absolute"
+        ],
+        "cwd": "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/acceptance/run-Izoj63/workspace/absolute/original",
+        "rejected_binding": false
+      },
+      "changed-launcher": {
+        "returncode": 0,
+        "seconds": 4.336228404999929,
+        "command": [
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+          "-m",
+          "tests.harness.workspace_campaign",
+          "--worker",
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/acceptance/run-Izoj63/workspace/absolute",
+          "--mode",
+          "absolute"
+        ],
+        "cwd": "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/acceptance/run-Izoj63/workspace/absolute/other",
+        "rejected_binding": false
+      },
+      "original-launcher": {
+        "returncode": 0,
+        "seconds": 1.382371497999884,
+        "command": [
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+          "-m",
+          "tests.harness.workspace_campaign",
+          "--worker",
+          "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/acceptance/run-Izoj63/workspace/absolute",
+          "--mode",
+          "absolute"
+        ],
+        "cwd": "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/acceptance/run-Izoj63/workspace/absolute/original",
+        "rejected_binding": false
+      }
+    },
+    "original_task_passed": true,
+    "original_tool_executions": 4,
+    "other_tool_executions": 0,
+    "original_patch_writes": 1,
+    "other_patch_writes": 0,
+    "api_cost_usd": null,
+    "model": "scripted ReplayModel"
+  }
+]
+Acceptance passed. Raw output: /mnt/e/Codex/简历/Coding-Agent-Harness/mini-swe-agent/../acceptance/run-Izoj63

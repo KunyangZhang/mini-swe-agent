@@ -1,0 +1,28 @@
+import pytest
+from chunking import chunked
+
+
+@pytest.mark.parametrize(('values', 'size', 'expected'), [
+    ([1, 2, 3, 4, 5], 2, [[1, 2], [3, 4], [5]]),
+    ([], 3, []),
+    ([1], 4, [[1]]),
+    ([1, 2], 1, [[1], [2]]),
+])
+def test_chunks(values, size, expected):
+    original = values.copy()
+    assert chunked(values, size) == expected
+    assert values == original
+
+
+def test_generator():
+    assert chunked((i for i in range(5)), 3) == [[0, 1, 2], [3, 4]]
+
+
+@pytest.mark.parametrize(('size',), [(0,), (-1,)])
+def test_invalid_size(size):
+    with pytest.raises(ValueError):
+        chunked([1, 2], size)
+
+
+def test_tuple_returns_lists():
+    assert chunked((1, 2, 3), 2) == [[1, 2], [3]]
