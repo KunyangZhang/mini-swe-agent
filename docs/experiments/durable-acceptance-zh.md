@@ -72,6 +72,7 @@ python -m tests.harness.live_campaign \
 HF_ENDPOINT=https://hf-mirror.com HF_HUB_DISABLE_XET=1 python - <<'PY'
 from huggingface_hub import snapshot_download
 snapshot_download('Qwen/Qwen2.5-Coder-3B-Instruct',
+                  revision='488639f1ff808d1d3d0ba301aef8c11461451ec5',
                   local_dir='/root/autodl-tmp/Coding-Agent-Harness/model', max_workers=4)
 PY
 ```
