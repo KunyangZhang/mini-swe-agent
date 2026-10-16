@@ -77,7 +77,8 @@ class RunStore:
             self.db.execute("INSERT OR REPLACE INTO snapshot VALUES (1,?)", (encode(state),))
             self.event(kind, {"phase": state["phase"], "calls": state["n_calls"], "cost": state["cost"]})
 
-    def begin(self, step: int, ordinal: int, action: dict) -> dict | None:
+    def result(self, step: int, ordinal: int, action: dict) -> dict | None:
+        """Read an existing outcome without creating an intent for an unstarted action."""
         row = self.db.execute("SELECT * FROM actions WHERE step=? AND ordinal=?", (step, ordinal)).fetchone()
         if row:
             if row["action"] != encode(action):
@@ -87,6 +88,11 @@ class RunStore:
                     f"Action {step}:{ordinal} has an unknown outcome. Inspect side effects and resolve explicitly."
                 )
             return json.loads(row["result"])
+        return None
+
+    def begin(self, step: int, ordinal: int, action: dict) -> dict | None:
+        if (result := self.result(step, ordinal, action)) is not None:
+            return result
         with self.db:
             self.db.execute("INSERT INTO actions VALUES (?,?,?,NULL)", (step, ordinal, encode(action)))
             self.event("action_started", {"step": step, "ordinal": ordinal, "action": action})

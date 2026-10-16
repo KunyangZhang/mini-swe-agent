@@ -2,10 +2,12 @@
 
 import hashlib
 import json
+import time
 from pathlib import Path
 
 from minisweagent import Environment, Model
 from minisweagent.agents.default import DefaultAgent
+from minisweagent.exceptions import TimeExceeded
 from minisweagent.harness.store import RunStore, fingerprint
 
 
@@ -97,8 +99,17 @@ class DurableAgent(DefaultAgent):
     def execute_actions(self, message: dict) -> list[dict]:
         outputs = []
         for ordinal, action in enumerate(message.get("extra", {}).get("actions", [])):
-            result = self.store.begin(self.n_calls, ordinal, action)
+            result = self.store.result(self.n_calls, ordinal, action)
             if result is None:
+                if 0 < self.config.wall_time_limit_seconds <= time.time() - self._start_time:
+                    raise TimeExceeded(
+                        {
+                            "role": "exit",
+                            "content": "TimeExceeded",
+                            "extra": {"exit_status": "TimeExceeded", "submission": ""},
+                        }
+                    )
+                self.store.begin(self.n_calls, ordinal, action)
                 result = self.env.execute(action)
                 self.store.complete(self.n_calls, ordinal, result)
             outputs.append(self._observation(self.n_calls, ordinal, result))
@@ -106,6 +117,7 @@ class DurableAgent(DefaultAgent):
             *self.model.format_observation_messages(message, outputs, self.get_template_vars())
         )
         self.phase, self.pending = "ready", None
+        self.n_consecutive_format_errors = 0
         self._checkpoint()
         return messages
 
