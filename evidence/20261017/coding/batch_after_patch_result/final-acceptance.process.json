@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/mnt/e/Codex/简历/Coding-Agent-Harness/.venv-harness/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "test_chunking.py"
+  ],
+  "fault": "",
+  "returncode": 0,
+  "wall_seconds": 1.1921341199999915,
+  "cpu_user_seconds": 0.18895699999999982,
+  "cpu_system_seconds": 0.14601200000000025,
+  "children_maxrss_kib_cumulative": 42808
+}

@@ -1,0 +1,99 @@
+Looking in indexes: http://mirrors.aliyun.com/pypi/simple
+Collecting transformers
+  Downloading http://mirrors.aliyun.com/pypi/packages/a2/3c/4ba88b706fee225aa71b147f51a753622405980a816b76d7e199a57f1804/transformers-5.20.0-py3-none-any.whl (12.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 25.6 MB/s eta 0:00:00
+Collecting accelerate
+  Downloading http://mirrors.aliyun.com/pypi/packages/8a/4c/34f0450479d01195027260da68d8a3880683f1640c3ca5adf64acb3185f1/accelerate-1.15.0-py3-none-any.whl (394 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.3/394.3 kB 60.5 MB/s eta 0:00:00
+Collecting huggingface_hub
+  Downloading http://mirrors.aliyun.com/pypi/packages/eb/b0/0f7b430fd100b3a3b037fdbb314878200241082e607b3383c63d91a13a72/huggingface_hub-2.2.0-py3-none-any.whl (839 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 839.9/839.9 kB 46.1 MB/s eta 0:00:00
+Requirement already satisfied: numpy>=1.17 in ./miniconda3/lib/python3.12/site-packages (from transformers) (2.4.6)
+Requirement already satisfied: packaging>=20.0 in ./miniconda3/lib/python3.12/site-packages (from transformers) (23.2)
+Requirement already satisfied: pyyaml>=5.1 in ./miniconda3/lib/python3.12/site-packages (from transformers) (6.0.3)
+Collecting regex>=2025.10.22 (from transformers)
+  Downloading http://mirrors.aliyun.com/pypi/packages/26/83/d2fbd2e4e3afb1167daa825187d196f313cbaa1a4768f311fb041bb0e3d2/regex-2026.9.29-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.8/807.8 kB 58.1 MB/s eta 0:00:00
+Collecting tokenizers<0.24.0,>=0.23.1 (from transformers)
+  Downloading http://mirrors.aliyun.com/pypi/packages/3a/40/6706b82693715581457c6d5423eaa7faae576bb0526c5738a57085eb4449/tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 90.6 MB/s eta 0:00:00
+Collecting typer (from transformers)
+  Downloading http://mirrors.aliyun.com/pypi/packages/07/ea/2e31b67051e91a133189e9c000c222502ddc6969856416de0d095de4c0b0/typer-0.27.3-py3-none-any.whl (123 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.3/123.3 kB 34.2 MB/s eta 0:00:00
+Collecting safetensors>=0.8.0 (from transformers)
+  Downloading http://mirrors.aliyun.com/pypi/packages/28/50/f203ff3a3ddfe19308efc83c5a3a29ed02bf786732ec35e68bf9162f3365/safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 516.0/516.0 kB 28.2 MB/s eta 0:00:00
+Requirement already satisfied: tqdm>=4.60 in ./miniconda3/lib/python3.12/site-packages (from transformers) (4.66.2)
+Requirement already satisfied: psutil in ./miniconda3/lib/python3.12/site-packages (from accelerate) (7.2.2)
+Requirement already satisfied: torch>=2.0.0 in ./miniconda3/lib/python3.12/site-packages (from accelerate) (2.12.1+cu130)
+Collecting click<9.0.0,>=8.4.2 (from huggingface_hub)
+  Downloading http://mirrors.aliyun.com/pypi/packages/58/50/6c0d534c5f134586a8e1ba4e330569e32f057e33372ae556463212fb4cd3/click-8.5.0-py3-none-any.whl (125 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 42.2 MB/s eta 0:00:00
+Requirement already satisfied: filelock>=3.10.0 in ./miniconda3/lib/python3.12/site-packages (from huggingface_hub) (3.29.4)
+Requirement already satisfied: fsspec>=2023.5.0 in ./miniconda3/lib/python3.12/site-packages (from huggingface_hub) (2026.6.0)
+Collecting hf-xet<2.0.0,>=1.6.0 (from huggingface_hub)
+  Downloading http://mirrors.aliyun.com/pypi/packages/a3/4c/2bf3b66c215d409655f28de1622393dde04c9461280d48c7924bb3b2decd/hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 143.6 MB/s eta 0:00:00
+Collecting httpx2<3,>=2.0.0 (from huggingface_hub)
+  Downloading http://mirrors.aliyun.com/pypi/packages/d8/9c/6fe8931fd9f381042a9e4c7d5a7b4cbf7016b252bec0c99a49fce42c3326/httpx2-2.13.1-py3-none-any.whl (95 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.6/95.6 kB 30.9 MB/s eta 0:00:00
+Requirement already satisfied: typing-extensions>=4.1.0 in ./miniconda3/lib/python3.12/site-packages (from huggingface_hub) (4.15.0)
+Requirement already satisfied: anyio>=4.10 in ./miniconda3/lib/python3.12/site-packages (from httpx2<3,>=2.0.0->huggingface_hub) (4.14.0)
+Collecting httpcore2==2.13.1 (from httpx2<3,>=2.0.0->huggingface_hub)
+  Downloading http://mirrors.aliyun.com/pypi/packages/09/ba/a4568248771ce81957bfb7cc600264a40fbcda092391ee1c415c50be4bea/httpcore2-2.13.1-py3-none-any.whl (83 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.4/83.4 kB 26.3 MB/s eta 0:00:00
+Collecting idna>=3.18 (from httpx2<3,>=2.0.0->huggingface_hub)
+  Downloading http://mirrors.aliyun.com/pypi/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl (69 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.6/69.6 kB 20.3 MB/s eta 0:00:00
+Collecting truststore>=0.10 (from httpx2<3,>=2.0.0->huggingface_hub)
+  Downloading http://mirrors.aliyun.com/pypi/packages/51/e9/3a7820be2bb0fe53b6bc9c3be26d3d1158004e4c3ab953aa6840b955b1e9/truststore-0.10.5-py3-none-any.whl (19 kB)
+Requirement already satisfied: h11>=0.16 in ./miniconda3/lib/python3.12/site-packages (from httpcore2==2.13.1->httpx2<3,>=2.0.0->huggingface_hub) (0.16.0)
+Requirement already satisfied: setuptools<82 in ./miniconda3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (69.5.1)
+Requirement already satisfied: sympy>=1.13.3 in ./miniconda3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in ./miniconda3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (3.6.1)
+Requirement already satisfied: jinja2 in ./miniconda3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (3.1.6)
+Requirement already satisfied: cuda-toolkit==13.0.2 in ./miniconda3/lib/python3.12/site-packages (from cuda-toolkit[cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (13.0.2)
+Requirement already satisfied: nvidia-cublas<=13.1.1.3,>=13.1.0.3 in ./miniconda3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (13.1.1.3)
+Requirement already satisfied: cuda-bindings<14,>=13.0.3 in ./miniconda3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (13.3.1)
+Requirement already satisfied: nvidia-cudnn-cu13==9.20.0.48 in ./miniconda3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (9.20.0.48)
+Requirement already satisfied: nvidia-cusparselt-cu13==0.8.1 in ./miniconda3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (0.8.1)
+Requirement already satisfied: nvidia-nccl-cu13==2.29.7 in ./miniconda3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (2.29.7)
+Requirement already satisfied: nvidia-nvshmem-cu13==3.4.5 in ./miniconda3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (3.4.5)
+Requirement already satisfied: triton==3.7.1 in ./miniconda3/lib/python3.12/site-packages (from torch>=2.0.0->accelerate) (3.7.1)
+Requirement already satisfied: nvidia-cuda-runtime==13.0.96.* in ./miniconda3/lib/python3.12/site-packages (from cuda-toolkit[cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (13.0.96)
+Requirement already satisfied: nvidia-cufft==12.0.0.61.* in ./miniconda3/lib/python3.12/site-packages (from cuda-toolkit[cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (12.0.0.61)
+Requirement already satisfied: nvidia-cufile==1.15.1.6.* in ./miniconda3/lib/python3.12/site-packages (from cuda-toolkit[cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (1.15.1.6)
+Requirement already satisfied: nvidia-cuda-cupti==13.0.85.* in ./miniconda3/lib/python3.12/site-packages (from cuda-toolkit[cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (13.0.85)
+Requirement already satisfied: nvidia-curand==10.4.0.35.* in ./miniconda3/lib/python3.12/site-packages (from cuda-toolkit[cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (10.4.0.35)
+Requirement already satisfied: nvidia-cusolver==12.0.4.66.* in ./miniconda3/lib/python3.12/site-packages (from cuda-toolkit[cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (12.0.4.66)
+Requirement already satisfied: nvidia-cusparse==12.6.3.3.* in ./miniconda3/lib/python3.12/site-packages (from cuda-toolkit[cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (12.6.3.3)
+Requirement already satisfied: nvidia-nvjitlink==13.0.88.* in ./miniconda3/lib/python3.12/site-packages (from cuda-toolkit[cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (13.0.88)
+Requirement already satisfied: nvidia-cuda-nvrtc==13.0.88.* in ./miniconda3/lib/python3.12/site-packages (from cuda-toolkit[cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (13.0.88)
+Requirement already satisfied: nvidia-nvtx==13.0.85.* in ./miniconda3/lib/python3.12/site-packages (from cuda-toolkit[cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.0.0->accelerate) (13.0.85)
+Collecting shellingham>=1.3.0 (from typer->transformers)
+  Downloading http://mirrors.aliyun.com/pypi/packages/e0/f9/0595336914c5619e5f28a1fb793285925a8cd4b432c9da0a987836c7f822/shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Collecting rich>=13.8.0 (from typer->transformers)
+  Downloading http://mirrors.aliyun.com/pypi/packages/82/3b/64d4899d73f91ba49a8c18a8ff3f0ea8f1c1d75481760df8c68ef5235bf5/rich-15.0.0-py3-none-any.whl (310 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.7/310.7 kB 73.1 MB/s eta 0:00:00
+Collecting annotated-doc>=0.0.2 (from typer->transformers)
+  Downloading http://mirrors.aliyun.com/pypi/packages/3e/30/e900b21425a860e195f32e37657aa1f7c7f2b1bfb26f03ca209b90933c06/annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+Requirement already satisfied: cuda-pathfinder>=1.4.2 in ./miniconda3/lib/python3.12/site-packages (from cuda-bindings<14,>=13.0.3->torch>=2.0.0->accelerate) (1.5.5)
+Collecting markdown-it-py>=2.2.0 (from rich>=13.8.0->typer->transformers)
+  Downloading http://mirrors.aliyun.com/pypi/packages/b3/81/4da04ced5a082363ecfa159c010d200ecbd959ae410c10c0264a38cac0f5/markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.7/91.7 kB 32.3 MB/s eta 0:00:00
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in ./miniconda3/lib/python3.12/site-packages (from rich>=13.8.0->typer->transformers) (2.20.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in ./miniconda3/lib/python3.12/site-packages (from sympy>=1.13.3->torch>=2.0.0->accelerate) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in ./miniconda3/lib/python3.12/site-packages (from jinja2->torch>=2.0.0->accelerate) (3.0.3)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers)
+  Downloading http://mirrors.aliyun.com/pypi/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: truststore, shellingham, safetensors, regex, mdurl, idna, hf-xet, click, annotated-doc, markdown-it-py, httpcore2, rich, httpx2, typer, huggingface_hub, tokenizers, accelerate, transformers
+  Attempting uninstall: truststore
+    Found existing installation: truststore 0.8.0
+    Uninstalling truststore-0.8.0:
+      Successfully uninstalled truststore-0.8.0
+  Attempting uninstall: idna
+    Found existing installation: idna 3.7
+    Uninstalling idna-3.7:
+      Successfully uninstalled idna-3.7
+Successfully installed accelerate-1.15.0 annotated-doc-0.0.5 click-8.5.0 hf-xet-1.7.0 httpcore2-2.13.1 httpx2-2.13.1 huggingface_hub-2.2.0 idna-3.20 markdown-it-py-4.2.0 mdurl-0.1.2 regex-2026.9.29 rich-15.0.0 safetensors-0.8.0 shellingham-1.5.4 tokenizers-0.23.3 transformers-5.20.0 truststore-0.10.5 typer-0.27.3
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv

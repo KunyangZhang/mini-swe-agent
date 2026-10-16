@@ -1,0 +1,26 @@
+ .github/workflows/durable-harness.yml              |   23 +
+ FORK_README.md                                     |  117 ++
+ evidence/demo-trajectory.json                      |  124 ++
+ evidence/recovery-report.json                      |   55 +
+ evidence/repeated-recovery.json                    | 1675 ++++++++++++++++++++
+ evidence/requirements-tested.txt                   |   90 ++
+ evidence/tests.txt                                 |   14 +
+ evidence/tests.xml                                 |    1 +
+ examples/durable_harness/README.md                 |   20 +
+ examples/durable_harness/fixture/stats.py.txt      |    4 +
+ examples/durable_harness/fixture/test_stats.py.txt |   15 +
+ examples/durable_harness/replay.json               |   50 +
+ src/minisweagent/agents/default.py                 |    4 +
+ src/minisweagent/agents/durable.py                 |  136 ++
+ src/minisweagent/harness/__init__.py               |    1 +
+ src/minisweagent/harness/replay.py                 |    9 +
+ src/minisweagent/harness/store.py                  |  129 ++
+ src/minisweagent/run/extra/durable.py              |   88 +
+ tests/harness/__init__.py                          |    0
+ tests/harness/benchmark.py                         |  109 ++
+ tests/harness/evaluate.py                          |   99 ++
+ tests/harness/test_cli.py                          |   61 +
+ tests/harness/test_durable.py                      |  278 ++++
+ tests/harness/test_protocols.py                    |   49 +
+ tests/harness/worker.py                            |   84 +
+ 25 files changed, 3235 insertions(+)

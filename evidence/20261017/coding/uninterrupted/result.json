@@ -1,0 +1,15 @@
+{
+  "case": "uninterrupted",
+  "policy": "durable",
+  "automatic_completed": true,
+  "required_verified_resolution": false,
+  "final_task_success": true,
+  "agent_submitted": true,
+  "actual_tool_executions": 4,
+  "actual_scripted_model_calls": 2,
+  "patch_writes": 1,
+  "duplicate_patch_writes": 0,
+  "api_calls": 0,
+  "api_cost_usd": null,
+  "test_file_unchanged": true
+}

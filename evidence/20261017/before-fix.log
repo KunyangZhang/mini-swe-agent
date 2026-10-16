@@ -1,0 +1,57 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+______ test_successful_batch_resets_format_error_count_before_checkpoint _______
+
+tmp_path = PosixPath('/tmp/pytest-of-admin/pytest-1/test_successful_batch_resets_f0')
+
+    def test_successful_batch_resets_format_error_count_before_checkpoint(tmp_path):
+        assert invoke(tmp_path, "format", "after_clean").returncode == 77
+        resumed = invoke(tmp_path, "format")
+        assert resumed.returncode == 0, resumed.stderr
+>       assert "Submitted" in resumed.stdout, resumed.stdout
+E       AssertionError: {'exit_status': 'RepeatedFormatError', 'submission': ''}
+E         
+E       assert 'Submitted' in "{'exit_status': 'RepeatedFormatError', 'submission': ''}\n"
+E        +  where "{'exit_status': 'RepeatedFormatError', 'submission': ''}\n" = CompletedProcess(args=['/mnt/e/Codex/简历/Coding-Agent-Harness/.venv-harness/bin/python', '-m', 'tests.harness.test_boun...ch_resets_f0', 'format'], returncode=0, stdout="{'exit_status': 'RepeatedFormatError', 'submission': ''}\n", stderr='').stdout
+
+tests/harness/test_boundaries.py:62: AssertionError
+________ test_expired_pending_reply_does_not_start_shell_after_restart _________
+
+tmp_path = PosixPath('/tmp/pytest-of-admin/pytest-1/test_expired_pending_reply_doe0')
+
+    def test_expired_pending_reply_does_not_start_shell_after_restart(tmp_path):
+        assert invoke(tmp_path, "deadline", "after_reply").returncode == 77
+        time.sleep(1.1)
+        resumed = invoke(tmp_path, "deadline")
+        assert resumed.returncode == 0, resumed.stderr
+>       assert "TimeExceeded" in resumed.stdout, resumed.stdout
+E       AssertionError: {'exit_status': 'Submitted', 'submission': ''}
+E         
+E       assert 'TimeExceeded' in "{'exit_status': 'Submitted', 'submission': ''}\n"
+E        +  where "{'exit_status': 'Submitted', 'submission': ''}\n" = CompletedProcess(args=['/mnt/e/Codex/简历/Coding-Agent-Harness/.venv-harness/bin/python', '-m', 'tests.harness.test_boun...d_pending_reply_doe0', 'deadline'], returncode=0, stdout="{'exit_status': 'Submitted', 'submission': ''}\n", stderr='').stdout
+
+tests/harness/test_boundaries.py:73: AssertionError
+______________ test_expired_mid_batch_does_not_start_next_action _______________
+
+tmp_path = PosixPath('/tmp/pytest-of-admin/pytest-1/test_expired_mid_batch_does_no0')
+
+    def test_expired_mid_batch_does_not_start_next_action(tmp_path):
+        with RunStore(tmp_path / "run") as store:
+            agent = DurableAgent(
+                ReplayModel(outputs=[reply(["echo first >> effects; sleep 1.1", "echo forbidden >> effects"], cost=0)]),
+                LocalEnvironment(cwd=str(tmp_path)), store=store, system_template="test", instance_template="{{task}}",
+                cost_limit=0, wall_time_limit_seconds=1,
+            )
+            assert agent.run("deadline")["exit_status"] == "TimeExceeded"
+>           assert (tmp_path / "effects").read_text() == "first\n"
+E           AssertionError: assert 'first\nforbidden\n' == 'first\n'
+E             
+E               first
+E             + forbidden
+
+tests/harness/test_boundaries.py:88: AssertionError
+=========================== short test summary info ============================
+FAILED tests/harness/test_boundaries.py::test_successful_batch_resets_format_error_count_before_checkpoint
+FAILED tests/harness/test_boundaries.py::test_expired_pending_reply_does_not_start_shell_after_restart
+FAILED tests/harness/test_boundaries.py::test_expired_mid_batch_does_not_start_next_action
+3 failed in 10.23s

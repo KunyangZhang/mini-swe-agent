@@ -1,0 +1,19 @@
+{
+  "case": "durable_after_reply",
+  "initial_returncode": 77,
+  "resume_returncode": 0,
+  "agent_exit_status": "LimitsExceeded",
+  "agent_submitted": false,
+  "acceptance_passed": false,
+  "test_file_unchanged": true,
+  "task_success": false,
+  "actual_model_calls": 12,
+  "actual_tool_executions": 12,
+  "input_tokens": 87024,
+  "output_tokens": 1380,
+  "generation_seconds": 37.62259243801236,
+  "peak_cuda_allocated_bytes": 7868674048,
+  "api_cost_usd": null,
+  "gpu_rental_cost": null,
+  "task_source_changed": false
+}

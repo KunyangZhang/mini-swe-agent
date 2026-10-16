@@ -1,0 +1,4 @@
+{
+  "reason": "Child exited 77; checked exact source, one ledger entry and independent 8-test pytest success.",
+  "simulated_operator": true
+}

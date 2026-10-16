@@ -1,0 +1,59 @@
+{
+  "scope": "existing scripted mean demo, original commit source",
+  "runs": [
+    {
+      "label": "before",
+      "command": [
+        "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "returncode": 1
+    },
+    {
+      "label": "run",
+      "command": [
+        "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+        "-m",
+        "minisweagent.run.extra.durable",
+        "run",
+        "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/harness-work/original-demo/session",
+        "--task",
+        "Fix mean for fractional and negative inputs",
+        "--workspace",
+        "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/harness-work/original-demo",
+        "--replay",
+        "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/examples/durable_harness/replay.json"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "after",
+      "command": [
+        "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "resume",
+      "command": [
+        "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/.venv-harness/bin/python",
+        "-m",
+        "minisweagent.run.extra.durable",
+        "run",
+        "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/harness-work/original-demo/session",
+        "--task",
+        "Fix mean for fractional and negative inputs",
+        "--workspace",
+        "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/harness-work/original-demo",
+        "--replay",
+        "/mnt/e/Codex/\u7b80\u5386/Coding-Agent-Harness/mini-swe-agent/examples/durable_harness/replay.json"
+      ],
+      "returncode": 0
+    }
+  ]
+}

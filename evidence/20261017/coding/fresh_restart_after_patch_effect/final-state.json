@@ -1,0 +1,18 @@
+{
+  "phase": "new",
+  "model_calls": 0,
+  "known_cost": 0,
+  "actions": [],
+  "events": [],
+  "snapshot": null,
+  "files": {
+    "chunking.py": {
+      "sha256": "701710cf089c06dd7fd3e34b9dda58cb21aef1e52eea90d98cabd6dabbc7e94e",
+      "content": "from itertools import islice\n\n\ndef chunked(values, size):\n    if size <= 0:\n        raise ValueError(\"size must be positive\")\n    iterator = iter(values)\n    chunks = []\n    while chunk := list(islice(iterator, size)):\n        chunks.append(chunk)\n    return chunks\n"
+    },
+    "patch-ledger.txt": {
+      "sha256": "070d3a887a0e49b2ba9fb5c41cf6fd9b28b97cf3f8b347453189c40684c14ed4",
+      "content": "patch\npatch\n"
+    }
+  }
+}

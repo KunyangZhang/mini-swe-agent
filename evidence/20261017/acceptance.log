@@ -1,0 +1,230 @@
+Verified: original commit fails exactly the three boundary reproductions.
+........................................................................ [ 69%]
+................................                                         [100%]
+104 passed in 61.02s (0:01:01)
+{
+  "generated_at": "2026-10-16T21:22:09.965501+00:00",
+  "python": "3.12.3",
+  "upstream_commit": "04d809ceab9df28f9adaed044884180159172930",
+  "evaluation_type": "scripted model, real local commands and abrupt child-process exits; not an LLM benchmark",
+  "cases": [
+    {
+      "crash_point": "after_reply",
+      "automatic_resume": "completed",
+      "writes_before_resolution": 1
+    },
+    {
+      "crash_point": "before_begin",
+      "automatic_resume": "completed",
+      "writes_before_resolution": 1
+    },
+    {
+      "crash_point": "after_result",
+      "automatic_resume": "completed",
+      "writes_before_resolution": 1
+    },
+    {
+      "crash_point": "after_observation",
+      "automatic_resume": "completed",
+      "writes_before_resolution": 1
+    },
+    {
+      "crash_point": "before_effect",
+      "automatic_resume": "blocked",
+      "writes_before_resolution": 0,
+      "after_verified_resolution": "completed"
+    },
+    {
+      "crash_point": "after_effect",
+      "automatic_resume": "blocked",
+      "writes_before_resolution": 1,
+      "after_verified_resolution": "completed"
+    },
+    {
+      "crash_point": "during_query",
+      "automatic_resume": "blocked",
+      "writes_before_resolution": 0
+    }
+  ],
+  "baseline": {
+    "policy": "unmodified DefaultAgent, fresh run after crash",
+    "crash_point": "after_effect",
+    "writes": 2
+  },
+  "limits": [
+    "No exactly-once guarantee for external effects",
+    "Model in-flight uncertainty stops the run",
+    "No SWE-bench or live-model quality measurement"
+  ]
+}
+{
+  "scope": "scripted mechanism experiment; actual Python edits and pytest; no live model/API",
+  "python": "3.12.3",
+  "cases": [
+    {
+      "case": "uninterrupted",
+      "policy": "durable",
+      "automatic_completed": true,
+      "required_verified_resolution": false,
+      "final_task_success": true,
+      "agent_submitted": true,
+      "actual_tool_executions": 4,
+      "actual_scripted_model_calls": 2,
+      "patch_writes": 1,
+      "duplicate_patch_writes": 0,
+      "api_calls": 0,
+      "api_cost_usd": null,
+      "test_file_unchanged": true
+    },
+    {
+      "case": "batch_after_patch_result",
+      "policy": "durable",
+      "automatic_completed": true,
+      "required_verified_resolution": false,
+      "final_task_success": true,
+      "agent_submitted": true,
+      "actual_tool_executions": 4,
+      "actual_scripted_model_calls": 2,
+      "patch_writes": 1,
+      "duplicate_patch_writes": 0,
+      "api_calls": 0,
+      "api_cost_usd": null,
+      "test_file_unchanged": true
+    },
+    {
+      "case": "before_observation_checkpoint",
+      "policy": "durable",
+      "automatic_completed": true,
+      "required_verified_resolution": false,
+      "final_task_success": true,
+      "agent_submitted": true,
+      "actual_tool_executions": 4,
+      "actual_scripted_model_calls": 2,
+      "patch_writes": 1,
+      "duplicate_patch_writes": 0,
+      "api_calls": 0,
+      "api_cost_usd": null,
+      "test_file_unchanged": true
+    },
+    {
+      "case": "manual_after_patch_effect",
+      "policy": "durable",
+      "automatic_completed": false,
+      "required_verified_resolution": true,
+      "final_task_success": true,
+      "agent_submitted": true,
+      "actual_tool_executions": 4,
+      "actual_scripted_model_calls": 2,
+      "patch_writes": 1,
+      "duplicate_patch_writes": 0,
+      "api_calls": 0,
+      "api_cost_usd": null,
+      "test_file_unchanged": true
+    },
+    {
+      "case": "fresh_restart_after_patch_effect",
+      "policy": "fresh DefaultAgent restart",
+      "automatic_completed": true,
+      "required_verified_resolution": false,
+      "final_task_success": true,
+      "agent_submitted": true,
+      "actual_tool_executions": 6,
+      "actual_scripted_model_calls": 3,
+      "patch_writes": 2,
+      "duplicate_patch_writes": 1,
+      "api_calls": 0,
+      "api_cost_usd": null,
+      "test_file_unchanged": true
+    },
+    {
+      "case": "workspace_drift_negative",
+      "policy": "durable",
+      "automatic_completed": false,
+      "required_verified_resolution": false,
+      "final_task_success": false,
+      "agent_submitted": true,
+      "actual_tool_executions": 4,
+      "actual_scripted_model_calls": 2,
+      "patch_writes": 1,
+      "duplicate_patch_writes": 0,
+      "api_calls": 0,
+      "api_cost_usd": null,
+      "test_file_unchanged": true
+    }
+  ],
+  "resource_notes": "Per invocation wall/CPU timings; maxrss is cumulative child high-water mark, not per-case peak."
+}
+{
+  "generated_at": "2026-10-16T21:24:40.369424+00:00",
+  "python": "3.12.3",
+  "repeats_per_fault": 25,
+  "workers": 4,
+  "seconds": 89.48298668199982,
+  "scope": "scripted model; real local subprocess commands; abrupt os._exit(77) at seven transaction boundaries",
+  "summary": {
+    "durable_cases": 175,
+    "automatic_completed": 100,
+    "safely_blocked": 75,
+    "duplicate_effect_cases": 0,
+    "fresh_restart_cases": 25,
+    "fresh_restart_duplicate_cases": 25
+  },
+  "by_fault": {
+    "after_reply": {
+      "n": 25,
+      "outcomes": {
+        "completed": 25
+      },
+      "duplicate_effect_cases": 0
+    },
+    "before_begin": {
+      "n": 25,
+      "outcomes": {
+        "completed": 25
+      },
+      "duplicate_effect_cases": 0
+    },
+    "after_result": {
+      "n": 25,
+      "outcomes": {
+        "completed": 25
+      },
+      "duplicate_effect_cases": 0
+    },
+    "after_observation": {
+      "n": 25,
+      "outcomes": {
+        "completed": 25
+      },
+      "duplicate_effect_cases": 0
+    },
+    "before_effect": {
+      "n": 25,
+      "outcomes": {
+        "blocked": 25
+      },
+      "duplicate_effect_cases": 0
+    },
+    "after_effect": {
+      "n": 25,
+      "outcomes": {
+        "blocked": 25
+      },
+      "duplicate_effect_cases": 0
+    },
+    "during_query": {
+      "n": 25,
+      "outcomes": {
+        "blocked": 25
+      },
+      "duplicate_effect_cases": 0
+    }
+  },
+  "limits": [
+    "Repeats cover the same seven fault boundaries, not 175 distinct scenarios.",
+    "Blocked runs require operator reconciliation and are not successful task completions.",
+    "Fresh restart is unmodified DefaultAgent; does not represent every competing harness.",
+    "No external exactly-once guarantee, machine power-loss simulation, live model or SWE-bench evaluation."
+  ]
+}
+Acceptance passed. Raw output: /mnt/e/Codex/简历/Coding-Agent-Harness/mini-swe-agent/../acceptance/run-OO20gl

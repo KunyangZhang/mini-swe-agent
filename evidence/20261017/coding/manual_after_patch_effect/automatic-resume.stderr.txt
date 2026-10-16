@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/e/Codex/简历/Coding-Agent-Harness/mini-swe-agent/tests/harness/coding_worker.py", line 112, in <module>
+    main(Path(sys.argv[1]).resolve())
+  File "/mnt/e/Codex/简历/Coding-Agent-Harness/mini-swe-agent/tests/harness/coding_worker.py", line 108, in main
+    print(json.dumps(agent.run(TASK)))
+                     ^^^^^^^^^^^^^^^
+  File "/mnt/e/Codex/简历/Coding-Agent-Harness/mini-swe-agent/src/minisweagent/agents/durable.py", line 66, in run
+    return self._run_loop()
+           ^^^^^^^^^^^^^^^^
+  File "/mnt/e/Codex/简历/Coding-Agent-Harness/mini-swe-agent/src/minisweagent/agents/default.py", line 102, in _run_loop
+    self.step()
+  File "/mnt/e/Codex/简历/Coding-Agent-Harness/mini-swe-agent/src/minisweagent/agents/durable.py", line 80, in step
+    return self.execute_actions(self.pending)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Codex/简历/Coding-Agent-Harness/mini-swe-agent/src/minisweagent/agents/durable.py", line 102, in execute_actions
+    result = self.store.result(self.n_calls, ordinal, action)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/e/Codex/简历/Coding-Agent-Harness/mini-swe-agent/src/minisweagent/harness/store.py", line 87, in result
+    raise AmbiguousActionError(
+minisweagent.harness.store.AmbiguousActionError: Action 1:1 has an unknown outcome. Inspect side effects and resolve explicitly.

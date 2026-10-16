@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/root/miniconda3/bin/python",
+    "-m",
+    "tests.harness.live_model",
+    "/root/autodl-tmp/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/live-with-source/durable_after_reply",
+    "--model-path",
+    "/root/autodl-tmp/Coding-Agent-Harness/model",
+    "--include-source"
+  ],
+  "fault": "",
+  "returncode": 0,
+  "wall_seconds": 49.60913377068937,
+  "cpu_user_seconds": 49.227699,
+  "cpu_system_seconds": 3.8543839999999996,
+  "children_maxrss_kib_cumulative": 6951552
+}

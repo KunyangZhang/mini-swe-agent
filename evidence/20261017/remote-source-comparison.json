@@ -1,0 +1,22 @@
+{
+  "local_code_commit": "222b8ea92ada7a1d9b29e9d69e447bf369e2e100",
+  "matches": {
+    "src/minisweagent/agents/durable.py": true,
+    "src/minisweagent/harness/store.py": true,
+    "tests/harness/__init__.py": true,
+    "tests/harness/benchmark.py": true,
+    "tests/harness/coding_campaign.py": true,
+    "tests/harness/coding_worker.py": true,
+    "tests/harness/evaluate.py": true,
+    "tests/harness/live_campaign.py": true,
+    "tests/harness/live_model.py": true,
+    "tests/harness/test_boundaries.py": true,
+    "tests/harness/test_cli.py": true,
+    "tests/harness/test_durable.py": true,
+    "tests/harness/test_protocols.py": true,
+    "tests/harness/worker.py": true,
+    "examples/durable_harness/chunking/chunking.py.txt": true,
+    "examples/durable_harness/chunking/test_chunking.py.txt": true
+  },
+  "note": "Remote git metadata was still initial commit during runs; actual file hashes match this committed code."
+}

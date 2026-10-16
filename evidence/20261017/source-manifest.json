@@ -1,0 +1,16 @@
+{
+  "code_commit": "222b8ea92ada7a1d9b29e9d69e447bf369e2e100",
+  "note": "Earlier runs executed this source as a working-tree patch atop 1f17d23; optional include-source flag was added before the second live condition.",
+  "sha256": {
+    "examples/durable_harness/chunking/chunking.py.txt": "878b9c842679afe94e750797b7fac6208467043a6e300a2e2f0437d3337d9c7c",
+    "examples/durable_harness/chunking/test_chunking.py.txt": "6d4483544fe2052afe6d91e45830000a2c18fb576cf3c5368f00d9bac3100752",
+    "scripts/accept_durable.sh": "5e618855758351cfa2fc36f2288869fecf53ba48211b012edd231de9a770937d",
+    "src/minisweagent/agents/durable.py": "a6e9c956bb254110607604a75f6837ec63c466cce513f1944decff35ff1ce3b2",
+    "src/minisweagent/harness/store.py": "144be552cbb07ad099e5bb1940327da0221ca3f4fdb0f1a637b2e3decedac0ed",
+    "tests/harness/coding_campaign.py": "1a2baa3a1ce836aff7230d499ab39d919958c98d7023ba70e8517e93edcd69b6",
+    "tests/harness/coding_worker.py": "d83baee48385503506b58b6209d754a53a2bd6e32c55ac139ae6dd0871749adf",
+    "tests/harness/live_campaign.py": "f58cfad74df1206eabed7c9f24508ff9a5859f2cf6d3e5647659c8ef3c37c202",
+    "tests/harness/live_model.py": "01b9723f530ee48ba2998d4682b213ee25b600094d71e1058d390acf29e1fc90",
+    "tests/harness/test_boundaries.py": "79f20a95f7f0af759f29a5ab899680e3496cc917faae333a3e600552d1bd11d3"
+  }
+}

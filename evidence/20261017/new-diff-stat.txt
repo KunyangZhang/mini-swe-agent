@@ -1,0 +1,11 @@
+ examples/durable_harness/chunking/chunking.py.txt  |   2 +
+ .../durable_harness/chunking/test_chunking.py.txt  |  28 ++++
+ scripts/accept_durable.sh                          |  46 ++++++
+ src/minisweagent/agents/durable.py                 |  14 +-
+ src/minisweagent/harness/store.py                  |   8 +-
+ tests/harness/coding_campaign.py                   | 158 ++++++++++++++++++++
+ tests/harness/coding_worker.py                     | 112 ++++++++++++++
+ tests/harness/live_campaign.py                     | 136 +++++++++++++++++
+ tests/harness/live_model.py                        | 140 +++++++++++++++++
+ tests/harness/test_boundaries.py                   | 165 +++++++++++++++++++++
+ 10 files changed, 807 insertions(+), 2 deletions(-)

@@ -1,0 +1,76 @@
+This is mini-swe-agent version 2.4.6.
+Check the v2 migration guide at https://klieret.short.gy/mini-v2-migration
+Loading global config from '/home/admin/.config/mini-swe-agent/.env'
+{
+  "generated_at": "2026-10-16T21:13:26.618988+00:00",
+  "python": "3.12.3",
+  "repeats_per_fault": 25,
+  "workers": 4,
+  "seconds": 85.49338938000005,
+  "scope": "scripted model; real local subprocess commands; abrupt os._exit(77) at seven transaction boundaries",
+  "summary": {
+    "durable_cases": 175,
+    "automatic_completed": 100,
+    "safely_blocked": 75,
+    "duplicate_effect_cases": 0,
+    "fresh_restart_cases": 25,
+    "fresh_restart_duplicate_cases": 25
+  },
+  "by_fault": {
+    "after_reply": {
+      "n": 25,
+      "outcomes": {
+        "completed": 25
+      },
+      "duplicate_effect_cases": 0
+    },
+    "before_begin": {
+      "n": 25,
+      "outcomes": {
+        "completed": 25
+      },
+      "duplicate_effect_cases": 0
+    },
+    "after_result": {
+      "n": 25,
+      "outcomes": {
+        "completed": 25
+      },
+      "duplicate_effect_cases": 0
+    },
+    "after_observation": {
+      "n": 25,
+      "outcomes": {
+        "completed": 25
+      },
+      "duplicate_effect_cases": 0
+    },
+    "before_effect": {
+      "n": 25,
+      "outcomes": {
+        "blocked": 25
+      },
+      "duplicate_effect_cases": 0
+    },
+    "after_effect": {
+      "n": 25,
+      "outcomes": {
+        "blocked": 25
+      },
+      "duplicate_effect_cases": 0
+    },
+    "during_query": {
+      "n": 25,
+      "outcomes": {
+        "blocked": 25
+      },
+      "duplicate_effect_cases": 0
+    }
+  },
+  "limits": [
+    "Repeats cover the same seven fault boundaries, not 175 distinct scenarios.",
+    "Blocked runs require operator reconciliation and are not successful task completions.",
+    "Fresh restart is unmodified DefaultAgent; does not represent every competing harness.",
+    "No external exactly-once guarantee, machine power-loss simulation, live model or SWE-bench evaluation."
+  ]
+}

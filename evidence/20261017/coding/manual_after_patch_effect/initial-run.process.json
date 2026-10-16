@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/mnt/e/Codex/简历/Coding-Agent-Harness/.venv-harness/bin/python",
+    "-m",
+    "tests.harness.coding_worker",
+    "/mnt/e/Codex/简历/Coding-Agent-Harness/mini-swe-agent/evidence/20261017/coding-final/manual_after_patch_effect"
+  ],
+  "fault": "after_patch_effect",
+  "returncode": 77,
+  "wall_seconds": 3.0541731379998964,
+  "cpu_user_seconds": 0.3644740000000004,
+  "cpu_system_seconds": 0.4156640000000005,
+  "children_maxrss_kib_cumulative": 42808
+}

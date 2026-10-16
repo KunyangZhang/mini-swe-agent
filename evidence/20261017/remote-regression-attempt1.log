@@ -1,0 +1,15 @@
+...................F.................................................... [ 69%]
+................................                                         [100%]
+=================================== FAILURES ===================================
+_____ test_large_unicode_output_has_full_artifact_and_bounded_observation ______
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_large_unicode_output_has_0')
+
+>   ???
+E   assert (0 == 1)
+E    +  where 0 = len([])
+
+/mnt/e/Codex/简历/Coding-Agent-Harness/mini-swe-agent/tests/harness/test_durable.py:123: AssertionError
+=========================== short test summary info ============================
+FAILED tests/harness/test_durable.py::test_large_unicode_output_has_full_artifact_and_bounded_observation
+1 failed, 103 passed in 32.66s

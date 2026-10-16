@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/root/miniconda3/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "test_chunking.py"
+  ],
+  "fault": "",
+  "returncode": 1,
+  "wall_seconds": 0.46552581153810024,
+  "cpu_user_seconds": 0.4252729999999971,
+  "cpu_system_seconds": 0.036107999999999585,
+  "children_maxrss_kib_cumulative": 6949128
+}

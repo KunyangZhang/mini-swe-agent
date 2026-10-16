@@ -1,0 +1,22 @@
+FF.                                                                      [100%]
+=================================== FAILURES ===================================
+_____________________________ test_fractional_mean _____________________________
+
+    def test_fractional_mean():
+>       assert mean([1, 2]) == 1.5
+E       assert 1 == 1.5
+E        +  where 1 = mean([1, 2])
+
+test_stats.py:6: AssertionError
+______________________________ test_negative_mean ______________________________
+
+    def test_negative_mean():
+>       assert mean([-2, -1]) == -1.5
+E       assert -2 == -1.5
+E        +  where -2 = mean([-2, -1])
+
+test_stats.py:10: AssertionError
+=========================== short test summary info ============================
+FAILED test_stats.py::test_fractional_mean - assert 1 == 1.5
+FAILED test_stats.py::test_negative_mean - assert -2 == -1.5
+2 failed, 1 passed in 1.43s

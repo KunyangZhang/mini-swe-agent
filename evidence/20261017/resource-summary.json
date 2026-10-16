@@ -1,0 +1,110 @@
+[
+  {
+    "group": "coding",
+    "case": "uninterrupted",
+    "measured_invocations": 5,
+    "sum_invocation_wall_seconds": 9.76859385500029,
+    "sum_child_cpu_user_seconds": 1.20813,
+    "sum_child_cpu_system_seconds": 1.369908,
+    "note": "includes initial/final acceptance, recovery and verification invocations where present; excludes driver overhead"
+  },
+  {
+    "group": "coding",
+    "case": "batch_after_patch_result",
+    "measured_invocations": 5,
+    "sum_invocation_wall_seconds": 9.74078206099989,
+    "sum_child_cpu_user_seconds": 1.2745210000000002,
+    "sum_child_cpu_system_seconds": 1.291136,
+    "note": "includes initial/final acceptance, recovery and verification invocations where present; excludes driver overhead"
+  },
+  {
+    "group": "coding",
+    "case": "before_observation_checkpoint",
+    "measured_invocations": 5,
+    "sum_invocation_wall_seconds": 9.72661938200008,
+    "sum_child_cpu_user_seconds": 1.2404059999999997,
+    "sum_child_cpu_system_seconds": 1.3282530000000001,
+    "note": "includes initial/final acceptance, recovery and verification invocations where present; excludes driver overhead"
+  },
+  {
+    "group": "coding",
+    "case": "manual_after_patch_effect",
+    "measured_invocations": 7,
+    "sum_invocation_wall_seconds": 12.295304227000088,
+    "sum_child_cpu_user_seconds": 1.646484,
+    "sum_child_cpu_system_seconds": 1.6108600000000002,
+    "note": "includes initial/final acceptance, recovery and verification invocations where present; excludes driver overhead"
+  },
+  {
+    "group": "coding",
+    "case": "fresh_restart_after_patch_effect",
+    "measured_invocations": 4,
+    "sum_invocation_wall_seconds": 10.16535933099999,
+    "sum_child_cpu_user_seconds": 1.3134579999999998,
+    "sum_child_cpu_system_seconds": 1.4154739999999997,
+    "note": "includes initial/final acceptance, recovery and verification invocations where present; excludes driver overhead"
+  },
+  {
+    "group": "coding",
+    "case": "workspace_drift_negative",
+    "measured_invocations": 5,
+    "sum_invocation_wall_seconds": 10.992856966999852,
+    "sum_child_cpu_user_seconds": 1.283481,
+    "sum_child_cpu_system_seconds": 1.5933400000000004,
+    "note": "includes initial/final acceptance, recovery and verification invocations where present; excludes driver overhead"
+  },
+  {
+    "group": "live",
+    "case": "default_uninterrupted",
+    "measured_invocations": 2,
+    "sum_invocation_wall_seconds": 50.9374087639153,
+    "sum_child_cpu_user_seconds": 50.249755,
+    "sum_child_cpu_system_seconds": 3.976931,
+    "note": "includes initial/final acceptance, recovery and verification invocations where present; excludes driver overhead"
+  },
+  {
+    "group": "live",
+    "case": "durable_uninterrupted",
+    "measured_invocations": 2,
+    "sum_invocation_wall_seconds": 55.89688850194216,
+    "sum_child_cpu_user_seconds": 54.675171999999996,
+    "sum_child_cpu_system_seconds": 4.726170999999999,
+    "note": "includes initial/final acceptance, recovery and verification invocations where present; excludes driver overhead"
+  },
+  {
+    "group": "live",
+    "case": "durable_after_reply",
+    "measured_invocations": 3,
+    "sum_invocation_wall_seconds": 62.17129347473383,
+    "sum_child_cpu_user_seconds": 62.28117800000001,
+    "sum_child_cpu_system_seconds": 6.81151,
+    "note": "includes initial/final acceptance, recovery and verification invocations where present; excludes driver overhead"
+  },
+  {
+    "group": "live-with-source",
+    "case": "default_uninterrupted",
+    "measured_invocations": 2,
+    "sum_invocation_wall_seconds": 53.440921142697334,
+    "sum_child_cpu_user_seconds": 53.12777,
+    "sum_child_cpu_system_seconds": 3.776197,
+    "note": "includes initial/final acceptance, recovery and verification invocations where present; excludes driver overhead"
+  },
+  {
+    "group": "live-with-source",
+    "case": "durable_uninterrupted",
+    "measured_invocations": 2,
+    "sum_invocation_wall_seconds": 53.342116015031934,
+    "sum_child_cpu_user_seconds": 52.652418,
+    "sum_child_cpu_system_seconds": 3.969937,
+    "note": "includes initial/final acceptance, recovery and verification invocations where present; excludes driver overhead"
+  },
+  {
+    "group": "live-with-source",
+    "case": "durable_after_reply",
+    "measured_invocations": 3,
+    "sum_invocation_wall_seconds": 62.41458443365991,
+    "sum_child_cpu_user_seconds": 62.99668200000001,
+    "sum_child_cpu_system_seconds": 6.330693,
+    "note": "includes initial/final acceptance, recovery and verification invocations where present; excludes driver overhead"
+  }
+]

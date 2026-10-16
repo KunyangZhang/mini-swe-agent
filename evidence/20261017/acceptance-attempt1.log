@@ -1,0 +1,4 @@
+  File "<string>", line 1
+    from importlib.metadata import distributions; print("\n".join(sorted(f"{d.metadata[\"Name\"]}=={d.version}" for d in distributions())))
+                                                                                        ^
+SyntaxError: unexpected character after line continuation character

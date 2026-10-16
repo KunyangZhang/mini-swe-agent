@@ -96,7 +96,7 @@ The [checked-in report](evidence/recovery-report.json) contains seven distinct p
 
 - Arbitrary shell side effects are **not exactly-once**. SQLite cannot transact with a shell, remote service, or file system. The design prefers stopping over unverified retry.
 - A child command can outlive a killed runner. Before resolving an unknown action, confirm the old process has stopped and inspect the workspace. This fork does not supervise detached commands across crashes.
-- Budgets follow upstream semantics: calls and known cost persist; cost can overshoot by one response. Wall time includes downtime but is checked between model requests, not a hard real-time deadline for every pending command.
+- Budgets follow upstream semantics: calls and known cost persist; cost can overshoot by one response. Wall time includes downtime and is checked before new model requests and before starting each unstarted shell action. Recorded results remain reusable and unknown outcomes still require reconciliation. This is not a hard deadline for in-flight work.
 - The full workspace, provider state, credentials, and OS environment are not snapshotted. The binding checks configured values, not arbitrary external state. Resume requires the same persistent workspace.
 - A submit command uses the upstream `Submitted` control-flow exception. If the terminal checkpoint exists, it is never rerun. If death occurs before that checkpoint, the intent is ambiguous. The journal may show an uncompleted final action even for a finished run because completion is represented by the terminal snapshot.
 - Journal and artifacts can contain prompts, code, shell output, and user-supplied secrets. Removing provider configuration from JSON exports is not general redaction.

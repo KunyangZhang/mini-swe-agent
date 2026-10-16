@@ -1,0 +1,14 @@
+{
+  "phase": "new",
+  "model_calls": 0,
+  "known_cost": 0,
+  "actions": [],
+  "events": [],
+  "snapshot": null,
+  "files": {
+    "chunking.py": {
+      "sha256": "878b9c842679afe94e750797b7fac6208467043a6e300a2e2f0437d3337d9c7c",
+      "content": "def chunked(values, size):\n    return [values[i:i + size] for i in range(0, len(values) - size + 1, size)]\n"
+    }
+  }
+}
